@@ -1,0 +1,37 @@
+[
+  {
+    "id": "discover",
+    "order": 1,
+    "titleKey": "process.steps.discover.title",
+    "descriptionKey": "process.steps.discover.description",
+    "icon": "search"
+  },
+  {
+    "id": "plan",
+    "order": 2,
+    "titleKey": "process.steps.plan.title",
+    "descriptionKey": "process.steps.plan.description",
+    "icon": "clipboard"
+  },
+  {
+    "id": "design",
+    "order": 3,
+    "titleKey": "process.steps.design.title",
+    "descriptionKey": "process.steps.design.description",
+    "icon": "panels"
+  },
+  {
+    "id": "develop",
+    "order": 4,
+    "titleKey": "process.steps.develop.title",
+    "descriptionKey": "process.steps.develop.description",
+    "icon": "code"
+  },
+  {
+    "id": "deliver",
+    "order": 5,
+    "titleKey": "process.steps.deliver.title",
+    "descriptionKey": "process.steps.deliver.description",
+    "icon": "package"
+  }
+]

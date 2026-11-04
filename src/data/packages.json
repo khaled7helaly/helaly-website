@@ -1,0 +1,227 @@
+[
+  {
+    "id": "career-launch",
+    "slug": "career-launch",
+    "order": 1,
+    "price": 1990,
+    "currency": "EGP",
+    "revisions": 2,
+    "deliveryKey": "packages.items.careerLaunch.delivery",
+    "nameKey": "packages.items.careerLaunch.name",
+    "audienceLabelKey": "packages.items.careerLaunch.audienceLabel",
+    "taglineKey": "packages.items.careerLaunch.tagline",
+    "promiseKey": "packages.items.careerLaunch.promise",
+    "introKey": "packages.items.careerLaunch.intro",
+    "audience": [
+      { "id": "graduates", "labelKey": "packages.items.careerLaunch.audienceItems.graduates" },
+      { "id": "jobSeekers", "labelKey": "packages.items.careerLaunch.audienceItems.jobSeekers" },
+      { "id": "careerSwitchers", "labelKey": "packages.items.careerLaunch.audienceItems.careerSwitchers" }
+    ],
+    "deliverables": [
+      { "id": "atsCv", "titleKey": "packages.items.careerLaunch.deliverables.atsCv.title", "detailKey": "packages.items.careerLaunch.deliverables.atsCv.detail" },
+      { "id": "linkedin", "titleKey": "packages.items.careerLaunch.deliverables.linkedin.title", "detailKey": "packages.items.careerLaunch.deliverables.linkedin.detail" },
+      { "id": "portfolio", "titleKey": "packages.items.careerLaunch.deliverables.portfolio.title", "detailKey": "packages.items.careerLaunch.deliverables.portfolio.detail" },
+      { "id": "businessCard", "titleKey": "packages.items.careerLaunch.deliverables.businessCard.title", "detailKey": "packages.items.careerLaunch.deliverables.businessCard.detail" },
+      { "id": "coverLetter", "titleKey": "packages.items.careerLaunch.deliverables.coverLetter.title", "detailKey": "packages.items.careerLaunch.deliverables.coverLetter.detail" }
+    ],
+    "highlightIds": ["atsCv", "linkedin", "portfolio", "businessCard", "coverLetter"],
+    "requirements": [
+      { "id": "existingCv", "labelKey": "packages.items.careerLaunch.requirements.existingCv" },
+      { "id": "linkedinUrl", "labelKey": "packages.items.careerLaunch.requirements.linkedinUrl" },
+      { "id": "targetRole", "labelKey": "packages.items.careerLaunch.requirements.targetRole" },
+      { "id": "achievements", "labelKey": "packages.items.careerLaunch.requirements.achievements" }
+    ],
+    "addons": [
+      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note", "pricing": { "type": "at-cost" } },
+      { "id": "second-language", "titleKey": "packages.addons.secondLanguage.title", "pricing": { "type": "fixed", "amount": 400, "currency": "EGP" } },
+      { "id": "fast-delivery", "titleKey": "packages.addons.fastDelivery.title", "pricing": { "type": "fixed", "amount": 400, "currency": "EGP" } },
+      { "id": "extra-cv-version", "titleKey": "packages.addons.extraCvVersion.title", "pricing": { "type": "fixed", "amount": 250, "currency": "EGP" } }
+    ],
+    "fields": [
+      { "id": "targetRole", "type": "text", "labelKey": "packages.fields.targetRole", "required": true },
+      { "id": "cvOrLinkedin", "type": "url", "labelKey": "packages.fields.cvOrLinkedin", "required": false },
+      { "id": "fileLanguage", "type": "select", "labelKey": "packages.fields.fileLanguage", "required": true, "options": ["languageQuote"] },
+      { "id": "experienceLevel", "type": "select", "labelKey": "packages.fields.experienceLevel", "required": true, "options": ["experience"] }
+    ],
+    "notes": []
+  },
+  {
+    "id": "freelancer-pro",
+    "slug": "freelancer-pro",
+    "order": 2,
+    "price": 3490,
+    "currency": "EGP",
+    "revisions": 2,
+    "deliveryKey": "packages.items.freelancerPro.delivery",
+    "nameKey": "packages.items.freelancerPro.name",
+    "audienceLabelKey": "packages.items.freelancerPro.audienceLabel",
+    "taglineKey": "packages.items.freelancerPro.tagline",
+    "promiseKey": "packages.items.freelancerPro.promise",
+    "introKey": "packages.items.freelancerPro.intro",
+    "audience": [
+      { "id": "developers", "labelKey": "packages.items.freelancerPro.audienceItems.developers" },
+      { "id": "designers", "labelKey": "packages.items.freelancerPro.audienceItems.designers" },
+      { "id": "videoEditors", "labelKey": "packages.items.freelancerPro.audienceItems.videoEditors" },
+      { "id": "writers", "labelKey": "packages.items.freelancerPro.audienceItems.writers" },
+      { "id": "translators", "labelKey": "packages.items.freelancerPro.audienceItems.translators" },
+      { "id": "marketers", "labelKey": "packages.items.freelancerPro.audienceItems.marketers" },
+      { "id": "independentFreelancers", "labelKey": "packages.items.freelancerPro.audienceItems.independentFreelancers" }
+    ],
+    "deliverables": [
+      { "id": "portfolioSite", "titleKey": "packages.items.freelancerPro.deliverables.portfolioSite.title", "detailKey": "packages.items.freelancerPro.deliverables.portfolioSite.detail" },
+      { "id": "freelanceProfiles", "titleKey": "packages.items.freelancerPro.deliverables.freelanceProfiles.title", "detailKey": "packages.items.freelancerPro.deliverables.freelanceProfiles.detail" },
+      { "id": "clientCv", "titleKey": "packages.items.freelancerPro.deliverables.clientCv.title", "detailKey": "packages.items.freelancerPro.deliverables.clientCv.detail" },
+      { "id": "linkedin", "titleKey": "packages.items.freelancerPro.deliverables.linkedin.title", "detailKey": "packages.items.freelancerPro.deliverables.linkedin.detail" },
+      { "id": "proposalTemplates", "titleKey": "packages.items.freelancerPro.deliverables.proposalTemplates.title", "detailKey": "packages.items.freelancerPro.deliverables.proposalTemplates.detail" },
+      { "id": "rateCard", "titleKey": "packages.items.freelancerPro.deliverables.rateCard.title", "detailKey": "packages.items.freelancerPro.deliverables.rateCard.detail" },
+      { "id": "reviewRequest", "titleKey": "packages.items.freelancerPro.deliverables.reviewRequest.title", "detailKey": "packages.items.freelancerPro.deliverables.reviewRequest.detail" },
+      { "id": "discoveryQuestionnaire", "titleKey": "packages.items.freelancerPro.deliverables.discoveryQuestionnaire.title", "detailKey": "packages.items.freelancerPro.deliverables.discoveryQuestionnaire.detail" }
+    ],
+    "highlightIds": ["portfolioSite", "freelanceProfiles", "clientCv", "proposalTemplates", "rateCard", "linkedin"],
+    "requirements": [
+      { "id": "previousWork", "labelKey": "packages.items.freelancerPro.requirements.previousWork" },
+      { "id": "servicesAndPrices", "labelKey": "packages.items.freelancerPro.requirements.servicesAndPrices" },
+      { "id": "targetClients", "labelKey": "packages.items.freelancerPro.requirements.targetClients" },
+      { "id": "platformUrls", "labelKey": "packages.items.freelancerPro.requirements.platformUrls" }
+    ],
+    "addons": [
+      { "id": "extra-platform", "titleKey": "packages.addons.extraPlatform.title", "pricing": { "type": "fixed", "amount": 300, "currency": "EGP" } },
+      { "id": "extra-case-study", "titleKey": "packages.addons.extraCaseStudy.title", "pricing": { "type": "fixed", "amount": 500, "currency": "EGP" } },
+      { "id": "bilingual-website", "titleKey": "packages.addons.bilingualWebsite.title", "pricing": { "type": "fixed", "amount": 600, "currency": "EGP" } },
+      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note", "pricing": { "type": "at-cost" } }
+    ],
+    "fields": [
+      { "id": "professionalField", "type": "text", "labelKey": "packages.fields.professionalField", "required": true },
+      { "id": "platformsUsed", "type": "text", "labelKey": "packages.fields.platformsUsed", "required": true },
+      { "id": "workLinks", "type": "url", "labelKey": "packages.fields.workLinks", "required": false },
+      { "id": "targetRegion", "type": "select", "labelKey": "packages.fields.targetRegion", "required": true, "options": ["region"] }
+    ],
+    "notes": [
+      { "id": "scopeInconsistency", "labelKey": "packages.items.freelancerPro.notes.scopeInconsistency" }
+    ]
+  },
+  {
+    "id": "digital-presence",
+    "slug": "digital-presence",
+    "order": 3,
+    "price": 4990,
+    "currency": "EGP",
+    "revisions": 2,
+    "deliveryKey": "packages.items.digitalPresence.delivery",
+    "nameKey": "packages.items.digitalPresence.name",
+    "audienceLabelKey": "packages.items.digitalPresence.audienceLabel",
+    "taglineKey": "packages.items.digitalPresence.tagline",
+    "promiseKey": "packages.items.digitalPresence.promise",
+    "introKey": "packages.items.digitalPresence.intro",
+    "audience": [
+      { "id": "shops", "labelKey": "packages.items.digitalPresence.audienceItems.shops" },
+      { "id": "clinics", "labelKey": "packages.items.digitalPresence.audienceItems.clinics" },
+      { "id": "centers", "labelKey": "packages.items.digitalPresence.audienceItems.centers" },
+      { "id": "restaurants", "labelKey": "packages.items.digitalPresence.audienceItems.restaurants" },
+      { "id": "gyms", "labelKey": "packages.items.digitalPresence.audienceItems.gyms" },
+      { "id": "homeBased", "labelKey": "packages.items.digitalPresence.audienceItems.homeBased" },
+      { "id": "localBusinesses", "labelKey": "packages.items.digitalPresence.audienceItems.localBusinesses" }
+    ],
+    "deliverables": [
+      { "id": "arabicWebsite", "titleKey": "packages.items.digitalPresence.deliverables.arabicWebsite.title", "detailKey": "packages.items.digitalPresence.deliverables.arabicWebsite.detail" },
+      { "id": "contactButtons", "titleKey": "packages.items.digitalPresence.deliverables.contactButtons.title", "detailKey": "packages.items.digitalPresence.deliverables.contactButtons.detail" },
+      { "id": "bookingForm", "titleKey": "packages.items.digitalPresence.deliverables.bookingForm.title", "detailKey": "packages.items.digitalPresence.deliverables.bookingForm.detail" },
+      { "id": "googleBusiness", "titleKey": "packages.items.digitalPresence.deliverables.googleBusiness.title", "detailKey": "packages.items.digitalPresence.deliverables.googleBusiness.detail" },
+      { "id": "qrCode", "titleKey": "packages.items.digitalPresence.deliverables.qrCode.title", "detailKey": "packages.items.digitalPresence.deliverables.qrCode.detail" },
+      { "id": "basicSeo", "titleKey": "packages.items.digitalPresence.deliverables.basicSeo.title", "detailKey": "packages.items.digitalPresence.deliverables.basicSeo.detail" },
+      { "id": "socialLinking", "titleKey": "packages.items.digitalPresence.deliverables.socialLinking.title", "detailKey": "packages.items.digitalPresence.deliverables.socialLinking.detail" },
+      { "id": "hosting", "titleKey": "packages.items.digitalPresence.deliverables.hosting.title", "detailKey": "packages.items.digitalPresence.deliverables.hosting.detail" },
+      { "id": "support", "titleKey": "packages.items.digitalPresence.deliverables.support.title", "detailKey": "packages.items.digitalPresence.deliverables.support.detail" }
+    ],
+    "highlightIds": ["arabicWebsite", "contactButtons", "bookingForm", "googleBusiness", "qrCode", "hosting"],
+    "requirements": [
+      { "id": "businessName", "labelKey": "packages.items.digitalPresence.requirements.businessName" },
+      { "id": "logo", "labelKey": "packages.items.digitalPresence.requirements.logo" },
+      { "id": "servicesAndPrices", "labelKey": "packages.items.digitalPresence.requirements.servicesAndPrices" },
+      { "id": "photos", "labelKey": "packages.items.digitalPresence.requirements.photos" },
+      { "id": "address", "labelKey": "packages.items.digitalPresence.requirements.address" },
+      { "id": "openingHours", "labelKey": "packages.items.digitalPresence.requirements.openingHours" },
+      { "id": "socialUrls", "labelKey": "packages.items.digitalPresence.requirements.socialUrls" }
+    ],
+    "addons": [
+      { "id": "english-version", "titleKey": "packages.addons.englishVersion.title", "pricing": { "type": "fixed", "amount": 1200, "currency": "EGP" } },
+      { "id": "additional-page", "titleKey": "packages.addons.additionalPage.title", "pricing": { "type": "fixed", "amount": 400, "currency": "EGP" } },
+      { "id": "visual-identity", "titleKey": "packages.addons.visualIdentity.title", "pricing": { "type": "fixed", "amount": 800, "currency": "EGP" } },
+      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note", "pricing": { "type": "at-cost" } }
+    ],
+    "fields": [
+      { "id": "businessName", "type": "text", "labelKey": "packages.fields.businessName", "required": true },
+      { "id": "businessType", "type": "text", "labelKey": "packages.fields.businessType", "required": true },
+      { "id": "city", "type": "text", "labelKey": "packages.fields.city", "required": true },
+      { "id": "socialPageLink", "type": "url", "labelKey": "packages.fields.socialPageLink", "required": false },
+      { "id": "hasLogo", "type": "select", "labelKey": "packages.fields.hasLogo", "required": true, "options": ["yesNo"] },
+      { "id": "hasGoogleProfile", "type": "select", "labelKey": "packages.fields.hasGoogleProfile", "required": true, "options": ["yesNo"] }
+    ],
+    "notes": [
+      { "id": "googleVerification", "labelKey": "packages.items.digitalPresence.notes.googleVerification" }
+    ]
+  },
+  {
+    "id": "quick-store",
+    "slug": "quick-store",
+    "order": 4,
+    "price": 5990,
+    "currency": "EGP",
+    "revisions": 2,
+    "deliveryKey": "packages.items.quickStore.delivery",
+    "nameKey": "packages.items.quickStore.name",
+    "audienceLabelKey": "packages.items.quickStore.audienceLabel",
+    "taglineKey": "packages.items.quickStore.tagline",
+    "promiseKey": "packages.items.quickStore.promise",
+    "introKey": "packages.items.quickStore.intro",
+    "audience": [
+      { "id": "facebook", "labelKey": "packages.items.quickStore.audienceItems.facebook" },
+      { "id": "instagram", "labelKey": "packages.items.quickStore.audienceItems.instagram" },
+      { "id": "tiktok", "labelKey": "packages.items.quickStore.audienceItems.tiktok" },
+      { "id": "whatsapp", "labelKey": "packages.items.quickStore.audienceItems.whatsapp" }
+    ],
+    "deliverables": [
+      { "id": "store", "titleKey": "packages.items.quickStore.deliverables.store.title", "detailKey": "packages.items.quickStore.deliverables.store.detail" },
+      { "id": "productContent", "titleKey": "packages.items.quickStore.deliverables.productContent.title", "detailKey": "packages.items.quickStore.deliverables.productContent.detail" },
+      { "id": "variants", "titleKey": "packages.items.quickStore.deliverables.variants.title", "detailKey": "packages.items.quickStore.deliverables.variants.detail" },
+      { "id": "categoriesSearch", "titleKey": "packages.items.quickStore.deliverables.categoriesSearch.title", "detailKey": "packages.items.quickStore.deliverables.categoriesSearch.detail" },
+      { "id": "cart", "titleKey": "packages.items.quickStore.deliverables.cart.title", "detailKey": "packages.items.quickStore.deliverables.cart.detail" },
+      { "id": "orderForm", "titleKey": "packages.items.quickStore.deliverables.orderForm.title", "detailKey": "packages.items.quickStore.deliverables.orderForm.detail" },
+      { "id": "shipping", "titleKey": "packages.items.quickStore.deliverables.shipping.title", "detailKey": "packages.items.quickStore.deliverables.shipping.detail" },
+      { "id": "cod", "titleKey": "packages.items.quickStore.deliverables.cod.title", "detailKey": "packages.items.quickStore.deliverables.cod.detail" },
+      { "id": "instapay", "titleKey": "packages.items.quickStore.deliverables.instapay.title", "detailKey": "packages.items.quickStore.deliverables.instapay.detail" },
+      { "id": "productManagement", "titleKey": "packages.items.quickStore.deliverables.productManagement.title", "detailKey": "packages.items.quickStore.deliverables.productManagement.detail" },
+      { "id": "mobileFirst", "titleKey": "packages.items.quickStore.deliverables.mobileFirst.title", "detailKey": "packages.items.quickStore.deliverables.mobileFirst.detail" },
+      { "id": "metaPixel", "titleKey": "packages.items.quickStore.deliverables.metaPixel.title", "detailKey": "packages.items.quickStore.deliverables.metaPixel.detail" },
+      { "id": "hosting", "titleKey": "packages.items.quickStore.deliverables.hosting.title", "detailKey": "packages.items.quickStore.deliverables.hosting.detail" }
+    ],
+    "highlightIds": ["store", "orderForm", "shipping", "cod", "productManagement", "metaPixel"],
+    "requirements": [
+      { "id": "storeName", "labelKey": "packages.items.quickStore.requirements.storeName" },
+      { "id": "logo", "labelKey": "packages.items.quickStore.requirements.logo" },
+      { "id": "productList", "labelKey": "packages.items.quickStore.requirements.productList" },
+      { "id": "productImages", "labelKey": "packages.items.quickStore.requirements.productImages" },
+      { "id": "shippingGovernorates", "labelKey": "packages.items.quickStore.requirements.shippingGovernorates" },
+      { "id": "shippingPrices", "labelKey": "packages.items.quickStore.requirements.shippingPrices" },
+      { "id": "paymentMethods", "labelKey": "packages.items.quickStore.requirements.paymentMethods" }
+    ],
+    "addons": [
+      { "id": "extra-products", "titleKey": "packages.addons.extraProducts.title", "pricing": { "type": "fixed", "amount": 500, "currency": "EGP" } },
+      { "id": "discount-codes", "titleKey": "packages.addons.discountCodes.title", "pricing": { "type": "fixed", "amount": 500, "currency": "EGP" } },
+      { "id": "order-tracking", "titleKey": "packages.addons.orderTracking.title", "pricing": { "type": "fixed", "amount": 700, "currency": "EGP" } },
+      { "id": "card-payments", "titleKey": "packages.addons.cardPayments.title", "noteKey": "packages.addons.cardPayments.note", "pricing": { "type": "from", "amount": 2000, "currency": "EGP" } },
+      { "id": "english-version", "titleKey": "packages.addons.englishVersion.title", "pricing": { "type": "fixed", "amount": 1200, "currency": "EGP" } },
+      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note", "pricing": { "type": "at-cost" } }
+    ],
+    "fields": [
+      { "id": "storeName", "type": "text", "labelKey": "packages.fields.storeName", "required": true },
+      { "id": "productType", "type": "text", "labelKey": "packages.fields.productType", "required": true },
+      { "id": "productQuantity", "type": "text", "labelKey": "packages.fields.productQuantity", "required": true },
+      { "id": "socialPageLink", "type": "url", "labelKey": "packages.fields.socialPageLink", "required": false },
+      { "id": "shippingGovernorates", "type": "text", "labelKey": "packages.fields.shippingGovernorates", "required": true }
+    ],
+    "notes": [
+      { "id": "cardPaymentsMerchant", "labelKey": "packages.items.quickStore.notes.cardPaymentsMerchant" }
+    ]
+  }
+]

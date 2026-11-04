@@ -1,0 +1,22 @@
+{
+  "languageQuote": [
+    { "value": "ar", "labelKey": "packages.options.language.ar" },
+    { "value": "en", "labelKey": "packages.options.language.en" },
+    { "value": "both", "labelKey": "packages.options.language.both" }
+  ],
+  "experience": [
+    { "value": "fresh", "labelKey": "packages.options.experience.fresh" },
+    { "value": "oneToThree", "labelKey": "packages.options.experience.oneToThree" },
+    { "value": "threeToFive", "labelKey": "packages.options.experience.threeToFive" },
+    { "value": "fivePlus", "labelKey": "packages.options.experience.fivePlus" }
+  ],
+  "region": [
+    { "value": "egypt", "labelKey": "packages.options.region.egypt" },
+    { "value": "gulf", "labelKey": "packages.options.region.gulf" },
+    { "value": "global", "labelKey": "packages.options.region.global" }
+  ],
+  "yesNo": [
+    { "value": "yes", "labelKey": "packages.options.yesNo.yes" },
+    { "value": "no", "labelKey": "packages.options.yesNo.no" }
+  ]
+}

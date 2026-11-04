@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helaly — Web &amp; Digital Marketing Studio</title>
+    <meta
+      name="description"
+      content="Helaly is a web and digital marketing studio. We design and build websites and web apps, connect them to digital marketing, and measure every step toward your goals."
+    />
+    <meta name="theme-color" content="#0A0A0B" />
+    <script>
+      (() => {
+        try {
+          const storedTheme = window.localStorage.getItem("helaly-theme");
+          const validTheme = storedTheme === "light" || storedTheme === "dark" ? storedTheme : "dark";
+          document.documentElement.setAttribute("data-theme", validTheme);
+          document.documentElement.style.colorScheme = validTheme;
+        } catch {
+          document.documentElement.setAttribute("data-theme", "dark");
+          document.documentElement.style.colorScheme = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,332 @@
+[
+  {
+    "id": "portfolio",
+    "serviceSlug": "portfolio-website",
+    "reference": "PRP-01",
+    "status": "complete",
+    "headlineKey": "services.proposals.portfolio.headline",
+    "introKey": "services.proposals.portfolio.intro",
+    "actions": ["request"],
+    "sections": [
+      {
+        "id": "overview",
+        "titleKey": "services.proposal.sections.overview",
+        "type": "prose",
+        "bodyKey": "services.proposals.portfolio.overview"
+      },
+      {
+        "id": "offers",
+        "titleKey": "services.proposal.sections.offers",
+        "type": "list",
+        "itemsKey": "services.proposals.portfolio.offers"
+      },
+      {
+        "id": "receive",
+        "titleKey": "services.proposal.sections.receive",
+        "type": "list",
+        "itemsKey": "services.proposals.portfolio.receive"
+      },
+      {
+        "id": "deliverables",
+        "titleKey": "services.proposal.sections.deliverables",
+        "type": "pairs",
+        "itemsKey": "services.proposals.portfolio.deliverables"
+      },
+      {
+        "id": "details",
+        "titleKey": "services.proposal.sections.details",
+        "type": "list",
+        "itemsKey": "services.proposals.portfolio.details"
+      },
+      {
+        "id": "optional",
+        "titleKey": "services.proposal.sections.optional",
+        "type": "addons"
+      },
+      {
+        "id": "pricing",
+        "titleKey": "services.proposal.sections.pricing",
+        "type": "pricing"
+      }
+    ]
+  },
+  {
+    "id": "corporate",
+    "serviceSlug": "company-website",
+    "reference": "PRP-02",
+    "status": "complete",
+    "headlineKey": "services.proposals.corporate.headline",
+    "introKey": "services.proposals.corporate.intro",
+    "actions": ["request"],
+    "sections": [
+      {
+        "id": "overview",
+        "titleKey": "services.proposal.sections.overview",
+        "type": "prose",
+        "bodyKey": "services.proposals.corporate.overview"
+      },
+      {
+        "id": "offers",
+        "titleKey": "services.proposal.sections.offers",
+        "type": "list",
+        "itemsKey": "services.proposals.corporate.offers"
+      },
+      {
+        "id": "receive",
+        "titleKey": "services.proposal.sections.receive",
+        "type": "list",
+        "itemsKey": "services.proposals.corporate.receive"
+      },
+      {
+        "id": "deliverables",
+        "titleKey": "services.proposal.sections.deliverables",
+        "type": "pairs",
+        "itemsKey": "services.proposals.corporate.deliverables"
+      },
+      {
+        "id": "details",
+        "titleKey": "services.proposal.sections.details",
+        "type": "list",
+        "itemsKey": "services.proposals.corporate.details"
+      },
+      {
+        "id": "optional",
+        "titleKey": "services.proposal.sections.optional",
+        "type": "addons"
+      },
+      {
+        "id": "pricing",
+        "titleKey": "services.proposal.sections.pricing",
+        "type": "pricing"
+      }
+    ]
+  },
+  {
+    "id": "academy",
+    "serviceSlug": "academy-website",
+    "reference": "PRP-03",
+    "status": "complete",
+    "headlineKey": "services.proposals.academy.headline",
+    "introKey": "services.proposals.academy.intro",
+    "actions": ["request"],
+    "sections": [
+      {
+        "id": "overview",
+        "titleKey": "services.proposal.sections.overview",
+        "type": "prose",
+        "bodyKey": "services.proposals.academy.overview"
+      },
+      {
+        "id": "offers",
+        "titleKey": "services.proposal.sections.offers",
+        "type": "list",
+        "itemsKey": "services.proposals.academy.offers"
+      },
+      {
+        "id": "receive",
+        "titleKey": "services.proposal.sections.receive",
+        "type": "list",
+        "itemsKey": "services.proposals.academy.receive"
+      },
+      {
+        "id": "deliverables",
+        "titleKey": "services.proposal.sections.deliverables",
+        "type": "pairs",
+        "itemsKey": "services.proposals.academy.deliverables"
+      },
+      {
+        "id": "details",
+        "titleKey": "services.proposal.sections.details",
+        "type": "list",
+        "itemsKey": "services.proposals.academy.details"
+      },
+      {
+        "id": "optional",
+        "titleKey": "services.proposal.sections.optional",
+        "type": "addons"
+      },
+      {
+        "id": "pricing",
+        "titleKey": "services.proposal.sections.pricing",
+        "type": "pricing"
+      }
+    ]
+  },
+  {
+    "id": "marketing",
+    "serviceSlug": "digital-marketing",
+    "reference": "PRP-04",
+    "status": "complete",
+    "headlineKey": "services.proposals.marketing.headline",
+    "introKey": "services.proposals.marketing.intro",
+    "actions": ["request"],
+    "sections": [
+      {
+        "id": "overview",
+        "titleKey": "services.proposal.sections.overview",
+        "type": "prose",
+        "bodyKey": "services.proposals.marketing.overview"
+      },
+      {
+        "id": "objective",
+        "titleKey": "services.proposal.sections.objective",
+        "type": "prose",
+        "bodyKey": "services.proposals.marketing.objective"
+      },
+      {
+        "id": "offers",
+        "titleKey": "services.proposal.sections.offers",
+        "type": "list",
+        "itemsKey": "services.proposals.marketing.offers"
+      },
+      {
+        "id": "receive",
+        "titleKey": "services.proposal.sections.receive",
+        "type": "list",
+        "itemsKey": "services.proposals.marketing.receive"
+      },
+      {
+        "id": "deliverables",
+        "titleKey": "services.proposal.sections.deliverables",
+        "type": "pairs",
+        "itemsKey": "services.proposals.marketing.deliverables"
+      },
+      {
+        "id": "example",
+        "titleKey": "services.proposal.sections.example",
+        "type": "prose",
+        "bodyKey": "services.proposals.marketing.example",
+        "tone": "highlight"
+      },
+      {
+        "id": "exampleResults",
+        "titleKey": "services.proposal.sections.exampleResults",
+        "type": "list",
+        "itemsKey": "services.proposals.marketing.exampleResults"
+      },
+      {
+        "id": "details",
+        "titleKey": "services.proposal.sections.details",
+        "type": "list",
+        "itemsKey": "services.proposals.marketing.details"
+      },
+      {
+        "id": "optional",
+        "titleKey": "services.proposal.sections.optional",
+        "type": "addons"
+      },
+      {
+        "id": "pricing",
+        "titleKey": "services.proposal.sections.pricing",
+        "type": "pricing"
+      }
+    ]
+  },
+  {
+    "id": "tourism",
+    "serviceSlug": "tourism-website",
+    "reference": "PRP-05",
+    "status": "outline",
+    "headlineKey": "services.proposals.tourism.headline",
+    "introKey": null
+  },
+  {
+    "id": "startup",
+    "serviceSlug": "startup-website",
+    "reference": "PRP-06",
+    "status": "outline",
+    "headlineKey": "services.proposals.startup.headline",
+    "introKey": null
+  },
+  {
+    "id": "wedding",
+    "serviceSlug": "wedding-website",
+    "reference": "PRP-07",
+    "status": "outline",
+    "headlineKey": "services.proposals.wedding.headline",
+    "introKey": null
+  },
+  {
+    "id": "store",
+    "serviceSlug": "online-store",
+    "reference": "PRP-08",
+    "status": "outline",
+    "headlineKey": "services.proposals.store.headline",
+    "introKey": null
+  },
+  {
+    "id": "restaurant",
+    "serviceSlug": "restaurant-website",
+    "reference": "PRP-09",
+    "status": "outline",
+    "headlineKey": "services.proposals.restaurant.headline",
+    "introKey": null
+  },
+  {
+    "id": "app",
+    "serviceSlug": "web-app",
+    "reference": "PRP-10",
+    "status": "outline",
+    "headlineKey": "services.proposals.app.headline",
+    "introKey": null
+  },
+  {
+    "id": "uiux",
+    "serviceSlug": "ui-ux-design",
+    "reference": "PRP-11",
+    "status": "outline",
+    "headlineKey": "services.proposals.uiux.headline",
+    "introKey": null
+  },
+  {
+    "id": "smallBusiness",
+    "serviceSlug": "small-business-website",
+    "reference": "PRP-12",
+    "status": "complete",
+    "headlineKey": "services.proposals.smallBusiness.headline",
+    "introKey": "services.proposals.smallBusiness.intro",
+    "actions": ["request"],
+    "sections": [
+      {
+        "id": "overview",
+        "titleKey": "services.proposal.sections.overview",
+        "type": "prose",
+        "bodyKey": "services.proposals.smallBusiness.overview"
+      },
+      {
+        "id": "offers",
+        "titleKey": "services.proposal.sections.offers",
+        "type": "list",
+        "itemsKey": "services.proposals.smallBusiness.offers"
+      },
+      {
+        "id": "receive",
+        "titleKey": "services.proposal.sections.receive",
+        "type": "list",
+        "itemsKey": "services.proposals.smallBusiness.receive"
+      },
+      {
+        "id": "deliverables",
+        "titleKey": "services.proposal.sections.deliverables",
+        "type": "pairs",
+        "itemsKey": "services.proposals.smallBusiness.deliverables"
+      },
+      {
+        "id": "details",
+        "titleKey": "services.proposal.sections.details",
+        "type": "list",
+        "itemsKey": "services.proposals.smallBusiness.details"
+      },
+      {
+        "id": "optional",
+        "titleKey": "services.proposal.sections.optional",
+        "type": "addons"
+      },
+      {
+        "id": "pricing",
+        "titleKey": "services.proposal.sections.pricing",
+        "type": "pricing"
+      }
+    ]
+  }
+]

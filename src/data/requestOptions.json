@@ -1,0 +1,64 @@
+{
+  "projectTypes": [
+    {
+      "value": "new-project",
+      "labelKey": "requestOptions.projectTypes.newProject"
+    },
+    {
+      "value": "redesign",
+      "labelKey": "requestOptions.projectTypes.redesign"
+    },
+    {
+      "value": "improvement",
+      "labelKey": "requestOptions.projectTypes.improvement"
+    },
+    {
+      "value": "maintenance-support",
+      "labelKey": "requestOptions.projectTypes.maintenanceSupport"
+    },
+    {
+      "value": "not-sure",
+      "labelKey": "requestOptions.projectTypes.notSure"
+    }
+  ],
+  "currencies": [
+    {
+      "value": "EGP",
+      "labelKey": "common.currencies.egp"
+    },
+    {
+      "value": "USD",
+      "labelKey": "common.currencies.usd"
+    },
+    {
+      "value": "SAR",
+      "labelKey": "common.currencies.sar"
+    }
+  ],
+  "timelines": [
+    {
+      "value": "asap",
+      "labelKey": "requestOptions.timelines.asap"
+    },
+    {
+      "value": "one-to-two-weeks",
+      "labelKey": "requestOptions.timelines.oneToTwoWeeks"
+    },
+    {
+      "value": "two-to-four-weeks",
+      "labelKey": "requestOptions.timelines.twoToFourWeeks"
+    },
+    {
+      "value": "one-to-two-months",
+      "labelKey": "requestOptions.timelines.oneToTwoMonths"
+    },
+    {
+      "value": "flexible",
+      "labelKey": "requestOptions.timelines.flexible"
+    },
+    {
+      "value": "other",
+      "labelKey": "requestOptions.timelines.other"
+    }
+  ]
+}

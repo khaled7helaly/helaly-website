@@ -1,0 +1,706 @@
+[
+  {
+    "id": "portfolio",
+    "slug": "portfolio-website",
+    "url": "/services/portfolio-website",
+    "category": "portfolio-websites",
+    "image": "/images/hero/portfolio.webp",
+    "icon": null,
+    "titleKey": "services.items.portfolio.title",
+    "intentKey": "services.items.portfolio.intent",
+    "shortDescriptionKey": "services.items.portfolio.shortDescription",
+    "previewDescriptionKey": "services.items.portfolio.previewDescription",
+    "overviewKey": "services.items.portfolio.overview",
+    "descriptionKey": "services.items.portfolio.description",
+    "featured": true,
+    "heroFeatured": true,
+    "featuredOrder": 1,
+    "popular": true,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.portfolio.features.work.title",
+        "descriptionKey": "services.items.portfolio.features.work.description"
+      },
+      {
+        "titleKey": "services.items.portfolio.features.projectPages.title",
+        "descriptionKey": "services.items.portfolio.features.projectPages.description"
+      },
+      {
+        "titleKey": "services.items.portfolio.features.aboutContact.title",
+        "descriptionKey": "services.items.portfolio.features.aboutContact.description"
+      },
+      {
+        "titleKey": "services.items.portfolio.features.responsive.title",
+        "descriptionKey": "services.items.portfolio.features.responsive.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.portfolio.deliverables.website.title",
+        "descriptionKey": "services.items.portfolio.deliverables.website.description"
+      },
+      {
+        "titleKey": "services.items.portfolio.deliverables.editable.title",
+        "descriptionKey": "services.items.portfolio.deliverables.editable.description"
+      },
+      {
+        "titleKey": "services.items.portfolio.deliverables.handover.title",
+        "descriptionKey": "services.items.portfolio.deliverables.handover.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["projectType", "description", "budget", "timeline"],
+      "extraFields": [],
+      "descriptionPromptKey": "services.request.prompts.portfolio"
+    }
+  },
+  {
+    "id": "wedding",
+    "slug": "wedding-website",
+    "url": "/services/wedding-website",
+    "category": "event-websites",
+    "image": "/images/hero/wedding.webp",
+    "icon": null,
+    "titleKey": "services.items.wedding.title",
+    "intentKey": "services.items.wedding.intent",
+    "shortDescriptionKey": "services.items.wedding.shortDescription",
+    "overviewKey": null,
+    "descriptionKey": null,
+    "featured": false,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.wedding.features.invitation.title",
+        "descriptionKey": "services.items.wedding.features.invitation.description"
+      },
+      {
+        "titleKey": "services.items.wedding.features.schedule.title",
+        "descriptionKey": "services.items.wedding.features.schedule.description"
+      },
+      {
+        "titleKey": "services.items.wedding.features.replies.title",
+        "descriptionKey": "services.items.wedding.features.replies.description"
+      },
+      {
+        "titleKey": "services.items.wedding.features.share.title",
+        "descriptionKey": "services.items.wedding.features.share.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.wedding.deliverables.page.title",
+        "descriptionKey": "services.items.wedding.deliverables.page.description"
+      },
+      {
+        "titleKey": "services.items.wedding.deliverables.replies.title",
+        "descriptionKey": "services.items.wedding.deliverables.replies.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["description", "budget", "timeline"],
+      "extraFields": [
+        {
+          "id": "eventDate",
+          "type": "date",
+          "labelKey": "services.request.fields.eventDate.label",
+          "helperTextKey": "services.request.fields.eventDate.helper"
+        }
+      ],
+      "descriptionPromptKey": "services.request.prompts.wedding"
+    }
+  },
+  {
+    "id": "startup",
+    "slug": "startup-website",
+    "url": "/services/startup-website",
+    "category": "startup-websites",
+    "image": "/images/hero/startup.webp",
+    "icon": null,
+    "titleKey": "services.items.startup.title",
+    "intentKey": "services.items.startup.intent",
+    "shortDescriptionKey": "services.items.startup.shortDescription",
+    "previewDescriptionKey": "services.items.startup.previewDescription",
+    "overviewKey": "services.items.startup.overview",
+    "descriptionKey": null,
+    "featured": true,
+    "popular": true,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.startup.features.pitch.title",
+        "descriptionKey": "services.items.startup.features.pitch.description"
+      },
+      {
+        "titleKey": "services.items.startup.features.sections.title",
+        "descriptionKey": "services.items.startup.features.sections.description"
+      },
+      {
+        "titleKey": "services.items.startup.features.signup.title",
+        "descriptionKey": "services.items.startup.features.signup.description"
+      },
+      {
+        "titleKey": "services.items.startup.features.responsive.title",
+        "descriptionKey": "services.items.startup.features.responsive.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.startup.deliverables.landing.title",
+        "descriptionKey": "services.items.startup.deliverables.landing.description"
+      },
+      {
+        "titleKey": "services.items.startup.deliverables.copy.title",
+        "descriptionKey": "services.items.startup.deliverables.copy.description"
+      },
+      {
+        "titleKey": "services.items.startup.deliverables.handover.title",
+        "descriptionKey": "services.items.startup.deliverables.handover.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["projectType", "description", "budget", "timeline"],
+      "extraFields": [],
+      "descriptionPromptKey": "services.request.prompts.startup"
+    }
+  },
+  {
+    "id": "store",
+    "slug": "online-store",
+    "url": "/services/online-store",
+    "category": "startup-websites",
+    "image": "/images/hero/store.webp",
+    "icon": null,
+    "titleKey": "services.items.store.title",
+    "intentKey": "services.items.store.intent",
+    "shortDescriptionKey": "services.items.store.shortDescription",
+    "previewDescriptionKey": "services.items.store.previewDescription",
+    "overviewKey": null,
+    "descriptionKey": null,
+    "featured": true,
+    "price": null,
+    "currency": "USD",
+    "order": 2,
+    "features": [
+      {
+        "titleKey": "services.items.store.features.catalog.title",
+        "descriptionKey": "services.items.store.features.catalog.description"
+      },
+      {
+        "titleKey": "services.items.store.features.checkout.title",
+        "descriptionKey": "services.items.store.features.checkout.description"
+      },
+      {
+        "titleKey": "services.items.store.features.orders.title",
+        "descriptionKey": "services.items.store.features.orders.description"
+      },
+      {
+        "titleKey": "services.items.store.features.mobile.title",
+        "descriptionKey": "services.items.store.features.mobile.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.store.deliverables.store.title",
+        "descriptionKey": "services.items.store.deliverables.store.description"
+      },
+      {
+        "titleKey": "services.items.store.deliverables.products.title",
+        "descriptionKey": "services.items.store.deliverables.products.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["projectType", "description", "budget", "timeline"],
+      "extraFields": [
+        {
+          "id": "productCount",
+          "type": "number",
+          "labelKey": "services.request.fields.productCount.label",
+          "helperTextKey": "services.request.fields.productCount.helper"
+        }
+      ],
+      "descriptionPromptKey": "services.request.prompts.store"
+    }
+  },
+  {
+    "id": "corporate",
+    "slug": "company-website",
+    "url": "/services/company-website",
+    "category": "company-websites",
+    "image": null,
+    "icon": null,
+    "titleKey": "services.items.corporate.title",
+    "intentKey": "services.items.corporate.intent",
+    "shortDescriptionKey": "services.items.corporate.shortDescription",
+    "previewDescriptionKey": "services.items.corporate.previewDescription",
+    "overviewKey": "services.items.corporate.overview",
+    "descriptionKey": null,
+    "featured": true,
+    "heroFeatured": true,
+    "featuredOrder": 3,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.corporate.features.profile.title",
+        "descriptionKey": "services.items.corporate.features.profile.description"
+      },
+      {
+        "titleKey": "services.items.corporate.features.services.title",
+        "descriptionKey": "services.items.corporate.features.services.description"
+      },
+      {
+        "titleKey": "services.items.corporate.features.credibility.title",
+        "descriptionKey": "services.items.corporate.features.credibility.description"
+      },
+      {
+        "titleKey": "services.items.corporate.features.channels.title",
+        "descriptionKey": "services.items.corporate.features.channels.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.corporate.deliverables.website.title",
+        "descriptionKey": "services.items.corporate.deliverables.website.description"
+      },
+      {
+        "titleKey": "services.items.corporate.deliverables.pages.title",
+        "descriptionKey": "services.items.corporate.deliverables.pages.description"
+      },
+      {
+        "titleKey": "services.items.corporate.deliverables.handover.title",
+        "descriptionKey": "services.items.corporate.deliverables.handover.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["projectType", "description", "budget", "timeline"],
+      "extraFields": [],
+      "descriptionPromptKey": "services.request.prompts.corporate"
+    }
+  },
+  {
+    "id": "academy",
+    "slug": "academy-website",
+    "url": "/services/academy-website",
+    "category": "academy-websites",
+    "image": null,
+    "icon": null,
+    "titleKey": "services.items.academy.title",
+    "intentKey": "services.items.academy.intent",
+    "shortDescriptionKey": "services.items.academy.shortDescription",
+    "previewDescriptionKey": "services.items.academy.previewDescription",
+    "overviewKey": "services.items.academy.overview",
+    "descriptionKey": null,
+    "featured": true,
+    "heroFeatured": true,
+    "featuredOrder": 2,
+    "popular": true,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.academy.features.courses.title",
+        "descriptionKey": "services.items.academy.features.courses.description"
+      },
+      {
+        "titleKey": "services.items.academy.features.instructors.title",
+        "descriptionKey": "services.items.academy.features.instructors.description"
+      },
+      {
+        "titleKey": "services.items.academy.features.enrollment.title",
+        "descriptionKey": "services.items.academy.features.enrollment.description"
+      },
+      {
+        "titleKey": "services.items.academy.features.mobile.title",
+        "descriptionKey": "services.items.academy.features.mobile.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.academy.deliverables.website.title",
+        "descriptionKey": "services.items.academy.deliverables.website.description"
+      },
+      {
+        "titleKey": "services.items.academy.deliverables.catalog.title",
+        "descriptionKey": "services.items.academy.deliverables.catalog.description"
+      },
+      {
+        "titleKey": "services.items.academy.deliverables.handover.title",
+        "descriptionKey": "services.items.academy.deliverables.handover.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["projectType", "description", "budget", "timeline"],
+      "extraFields": [],
+      "descriptionPromptKey": "services.request.prompts.academy"
+    }
+  },
+  {
+    "id": "restaurant",
+    "slug": "restaurant-website",
+    "url": "/services/restaurant-website",
+    "category": "restaurant-websites",
+    "image": null,
+    "icon": null,
+    "titleKey": "services.items.restaurant.title",
+    "intentKey": "services.items.restaurant.intent",
+    "shortDescriptionKey": "services.items.restaurant.shortDescription",
+    "overviewKey": null,
+    "descriptionKey": null,
+    "featured": false,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.restaurant.features.menu.title",
+        "descriptionKey": "services.items.restaurant.features.menu.description"
+      },
+      {
+        "titleKey": "services.items.restaurant.features.hours.title",
+        "descriptionKey": "services.items.restaurant.features.hours.description"
+      },
+      {
+        "titleKey": "services.items.restaurant.features.reservations.title",
+        "descriptionKey": "services.items.restaurant.features.reservations.description"
+      },
+      {
+        "titleKey": "services.items.restaurant.features.gallery.title",
+        "descriptionKey": "services.items.restaurant.features.gallery.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.restaurant.deliverables.website.title",
+        "descriptionKey": "services.items.restaurant.deliverables.website.description"
+      },
+      {
+        "titleKey": "services.items.restaurant.deliverables.menu.title",
+        "descriptionKey": "services.items.restaurant.deliverables.menu.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["description", "budget", "timeline"],
+      "extraFields": [],
+      "descriptionPromptKey": "services.request.prompts.restaurant"
+    }
+  },
+  {
+    "id": "tourism",
+    "slug": "tourism-website",
+    "url": "/services/tourism-website",
+    "category": "tourism-websites",
+    "image": null,
+    "icon": null,
+    "titleKey": "services.items.tourism.title",
+    "intentKey": "services.items.tourism.intent",
+    "shortDescriptionKey": "services.items.tourism.shortDescription",
+    "previewDescriptionKey": "services.items.tourism.previewDescription",
+    "overviewKey": "services.items.tourism.overview",
+    "descriptionKey": null,
+    "featured": true,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.tourism.features.packages.title",
+        "descriptionKey": "services.items.tourism.features.packages.description"
+      },
+      {
+        "titleKey": "services.items.tourism.features.itinerary.title",
+        "descriptionKey": "services.items.tourism.features.itinerary.description"
+      },
+      {
+        "titleKey": "services.items.tourism.features.booking.title",
+        "descriptionKey": "services.items.tourism.features.booking.description"
+      },
+      {
+        "titleKey": "services.items.tourism.features.gallery.title",
+        "descriptionKey": "services.items.tourism.features.gallery.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.tourism.deliverables.website.title",
+        "descriptionKey": "services.items.tourism.deliverables.website.description"
+      },
+      {
+        "titleKey": "services.items.tourism.deliverables.packages.title",
+        "descriptionKey": "services.items.tourism.deliverables.packages.description"
+      },
+      {
+        "titleKey": "services.items.tourism.deliverables.handover.title",
+        "descriptionKey": "services.items.tourism.deliverables.handover.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["projectType", "description", "budget", "timeline"],
+      "extraFields": [],
+      "descriptionPromptKey": "services.request.prompts.tourism"
+    }
+  },
+  {
+    "id": "app",
+    "slug": "web-app",
+    "url": "/services/web-app",
+    "category": "applications",
+    "image": "/images/hero/app.webp",
+    "icon": null,
+    "titleKey": "services.items.app.title",
+    "intentKey": "services.items.app.intent",
+    "shortDescriptionKey": "services.items.app.shortDescription",
+    "overviewKey": null,
+    "descriptionKey": null,
+    "featured": false,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.app.features.workflow.title",
+        "descriptionKey": "services.items.app.features.workflow.description"
+      },
+      {
+        "titleKey": "services.items.app.features.roles.title",
+        "descriptionKey": "services.items.app.features.roles.description"
+      },
+      {
+        "titleKey": "services.items.app.features.dashboards.title",
+        "descriptionKey": "services.items.app.features.dashboards.description"
+      },
+      {
+        "titleKey": "services.items.app.features.access.title",
+        "descriptionKey": "services.items.app.features.access.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.app.deliverables.app.title",
+        "descriptionKey": "services.items.app.deliverables.app.description"
+      },
+      {
+        "titleKey": "services.items.app.deliverables.handover.title",
+        "descriptionKey": "services.items.app.deliverables.handover.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["projectType", "description", "budget", "timeline"],
+      "extraFields": [],
+      "descriptionPromptKey": "services.request.prompts.app"
+    }
+  },
+  {
+    "id": "uiux",
+    "slug": "ui-ux-design",
+    "url": "/services/ui-ux-design",
+    "category": "ui-ux-design",
+    "image": "/images/hero/uiux.webp",
+    "icon": null,
+    "titleKey": "services.items.uiux.title",
+    "intentKey": "services.items.uiux.intent",
+    "shortDescriptionKey": "services.items.uiux.shortDescription",
+    "overviewKey": null,
+    "descriptionKey": null,
+    "featured": false,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.uiux.features.flows.title",
+        "descriptionKey": "services.items.uiux.features.flows.description"
+      },
+      {
+        "titleKey": "services.items.uiux.features.wireframes.title",
+        "descriptionKey": "services.items.uiux.features.wireframes.description"
+      },
+      {
+        "titleKey": "services.items.uiux.features.screens.title",
+        "descriptionKey": "services.items.uiux.features.screens.description"
+      },
+      {
+        "titleKey": "services.items.uiux.features.system.title",
+        "descriptionKey": "services.items.uiux.features.system.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.uiux.deliverables.designs.title",
+        "descriptionKey": "services.items.uiux.deliverables.designs.description"
+      },
+      {
+        "titleKey": "services.items.uiux.deliverables.handoff.title",
+        "descriptionKey": "services.items.uiux.deliverables.handoff.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["projectType", "description", "budget", "timeline"],
+      "extraFields": [],
+      "descriptionPromptKey": "services.request.prompts.uiux"
+    }
+  },
+  {
+    "id": "marketing",
+    "slug": "digital-marketing",
+    "url": "/services/digital-marketing",
+    "category": "digital-marketing",
+    "image": "/images/hero/marketing.webp",
+    "icon": null,
+    "titleKey": "services.items.marketing.title",
+    "intentKey": "services.items.marketing.intent",
+    "shortDescriptionKey": "services.items.marketing.shortDescription",
+    "previewDescriptionKey": "services.items.marketing.previewDescription",
+    "overviewKey": "services.items.marketing.overview",
+    "descriptionKey": "services.items.marketing.description",
+    "featured": true,
+    "heroFeatured": true,
+    "featuredOrder": 4,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.marketing.features.plan.title",
+        "descriptionKey": "services.items.marketing.features.plan.description"
+      },
+      {
+        "titleKey": "services.items.marketing.features.content.title",
+        "descriptionKey": "services.items.marketing.features.content.description"
+      },
+      {
+        "titleKey": "services.items.marketing.features.campaigns.title",
+        "descriptionKey": "services.items.marketing.features.campaigns.description"
+      },
+      {
+        "titleKey": "services.items.marketing.features.reporting.title",
+        "descriptionKey": "services.items.marketing.features.reporting.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.marketing.deliverables.plan.title",
+        "descriptionKey": "services.items.marketing.deliverables.plan.description"
+      },
+      {
+        "titleKey": "services.items.marketing.deliverables.assets.title",
+        "descriptionKey": "services.items.marketing.deliverables.assets.description"
+      },
+      {
+        "titleKey": "services.items.marketing.deliverables.report.title",
+        "descriptionKey": "services.items.marketing.deliverables.report.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["description", "budget", "timeline"],
+      "extraFields": [
+        {
+          "id": "goals",
+          "type": "textarea",
+          "labelKey": "services.request.fields.goals.label",
+          "helperTextKey": "services.request.fields.goals.helper"
+        }
+      ],
+      "descriptionPromptKey": "services.request.prompts.marketing"
+    }
+  },
+  {
+    "id": "small-business",
+    "slug": "small-business-website",
+    "url": "/services/small-business-website",
+    "category": "small-business-websites",
+    "image": null,
+    "icon": null,
+    "titleKey": "services.items.smallBusiness.title",
+    "intentKey": "services.items.smallBusiness.intent",
+    "shortDescriptionKey": "services.items.smallBusiness.shortDescription",
+    "previewDescriptionKey": "services.items.smallBusiness.previewDescription",
+    "overviewKey": "services.items.smallBusiness.overview",
+    "descriptionKey": "services.items.smallBusiness.description",
+    "featured": true,
+    "price": null,
+    "currency": "USD",
+    "order": 1,
+    "features": [
+      {
+        "titleKey": "services.items.smallBusiness.features.design.title",
+        "descriptionKey": "services.items.smallBusiness.features.design.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.features.introduction.title",
+        "descriptionKey": "services.items.smallBusiness.features.introduction.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.features.about.title",
+        "descriptionKey": "services.items.smallBusiness.features.about.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.features.showcase.title",
+        "descriptionKey": "services.items.smallBusiness.features.showcase.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.features.contact.title",
+        "descriptionKey": "services.items.smallBusiness.features.contact.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.features.whatsapp.title",
+        "descriptionKey": "services.items.smallBusiness.features.whatsapp.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.features.social.title",
+        "descriptionKey": "services.items.smallBusiness.features.social.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.features.mobile.title",
+        "descriptionKey": "services.items.smallBusiness.features.mobile.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.features.seo.title",
+        "descriptionKey": "services.items.smallBusiness.features.seo.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.features.callsToAction.title",
+        "descriptionKey": "services.items.smallBusiness.features.callsToAction.description"
+      }
+    ],
+    "deliverables": [
+      {
+        "titleKey": "services.items.smallBusiness.deliverables.website.title",
+        "descriptionKey": "services.items.smallBusiness.deliverables.website.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.deliverables.pages.title",
+        "descriptionKey": "services.items.smallBusiness.deliverables.pages.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.deliverables.contactMethods.title",
+        "descriptionKey": "services.items.smallBusiness.deliverables.contactMethods.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.deliverables.optionalFeatures.title",
+        "descriptionKey": "services.items.smallBusiness.deliverables.optionalFeatures.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.deliverables.seo.title",
+        "descriptionKey": "services.items.smallBusiness.deliverables.seo.description"
+      },
+      {
+        "titleKey": "services.items.smallBusiness.deliverables.handover.title",
+        "descriptionKey": "services.items.smallBusiness.deliverables.handover.description"
+      }
+    ],
+    "requestConfig": {
+      "optionalFields": ["projectType", "description", "budget", "timeline"],
+      "extraFields": [],
+      "descriptionPromptKey": "services.request.prompts.smallBusiness"
+    }
+  }
+]

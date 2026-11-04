@@ -1,0 +1,101 @@
+[
+  {
+    "id": "portfolio-websites",
+    "slug": "portfolio-websites",
+    "group": "web-development",
+    "titleKey": "services.categories.portfolio-websites.title",
+    "descriptionKey": "services.categories.portfolio-websites.description",
+    "icon": null,
+    "order": 1
+  },
+  {
+    "id": "company-websites",
+    "slug": "company-websites",
+    "group": "web-development",
+    "titleKey": "services.categories.company-websites.title",
+    "descriptionKey": "services.categories.company-websites.description",
+    "icon": null,
+    "order": 2
+  },
+  {
+    "id": "academy-websites",
+    "slug": "academy-websites",
+    "group": "web-development",
+    "titleKey": "services.categories.academy-websites.title",
+    "descriptionKey": "services.categories.academy-websites.description",
+    "icon": null,
+    "order": 3
+  },
+  {
+    "id": "restaurant-websites",
+    "slug": "restaurant-websites",
+    "group": "web-development",
+    "titleKey": "services.categories.restaurant-websites.title",
+    "descriptionKey": "services.categories.restaurant-websites.description",
+    "icon": null,
+    "order": 4
+  },
+  {
+    "id": "tourism-websites",
+    "slug": "tourism-websites",
+    "group": "web-development",
+    "titleKey": "services.categories.tourism-websites.title",
+    "descriptionKey": "services.categories.tourism-websites.description",
+    "icon": null,
+    "order": 5
+  },
+  {
+    "id": "startup-websites",
+    "slug": "startup-websites",
+    "group": "web-development",
+    "titleKey": "services.categories.startup-websites.title",
+    "descriptionKey": "services.categories.startup-websites.description",
+    "icon": null,
+    "order": 6
+  },
+  {
+    "id": "event-websites",
+    "slug": "event-websites",
+    "group": "web-development",
+    "titleKey": "services.categories.event-websites.title",
+    "descriptionKey": "services.categories.event-websites.description",
+    "icon": null,
+    "order": 7
+  },
+  {
+    "id": "applications",
+    "slug": "applications",
+    "group": "web-development",
+    "titleKey": "services.categories.applications.title",
+    "descriptionKey": "services.categories.applications.description",
+    "icon": null,
+    "order": 8
+  },
+  {
+    "id": "ui-ux-design",
+    "slug": "ui-ux-design",
+    "group": "web-development",
+    "titleKey": "services.categories.ui-ux-design.title",
+    "descriptionKey": "services.categories.ui-ux-design.description",
+    "icon": null,
+    "order": 9
+  },
+  {
+    "id": "digital-marketing",
+    "slug": "digital-marketing",
+    "group": "digital-marketing",
+    "titleKey": "services.categories.digital-marketing.title",
+    "descriptionKey": "services.categories.digital-marketing.description",
+    "icon": null,
+    "order": 10
+  },
+  {
+    "id": "small-business-websites",
+    "slug": "small-business-websites",
+    "group": "web-development",
+    "titleKey": "services.categories.small-business-websites.title",
+    "descriptionKey": "services.categories.small-business-websites.description",
+    "icon": null,
+    "order": 11
+  }
+]

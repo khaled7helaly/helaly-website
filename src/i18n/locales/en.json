@@ -1,0 +1,1581 @@
+{
+  "common": {
+    "home": "Home",
+    "startProject": "Start a Project",
+    "services": "Services",
+    "packages": "Packages",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "viewDetails": "View details",
+    "requestService": "Request this service",
+    "exploreServices": "Explore services",
+    "viewAllProjects": "View all projects",
+    "viewAll": "View all",
+    "featured": "Featured",
+    "backToServices": "Back to services",
+    "backToProjects": "Back to projects",
+    "changeLanguage": "Change language",
+    "mainNavigation": "Main navigation",
+    "breadcrumbNavigation": "Breadcrumb",
+    "theme": {
+      "switchToLightMode": "Switch to Light Mode",
+      "switchToDarkMode": "Switch to Dark Mode",
+      "themeLabel": "Theme"
+    },
+    "all": "All",
+    "currencies": {
+      "egp": "EGP — Egyptian Pound",
+      "usd": "USD — US Dollar",
+      "sar": "SAR — Saudi Riyal"
+    },
+    "form": {
+      "required": "Required"
+    },
+    "emptyState": {
+      "title": "Nothing here yet",
+      "description": "There is no content to display right now.",
+      "action": "Go back"
+    }
+  },
+  "hero": {
+    "title": "We turn ambition into progress you can measure",
+    "description": "A web and digital marketing studio. We design and build websites and web apps, and turn ambition into progress you can measure.",
+    "eyebrow": "Web & digital marketing studio",
+    "titleLead": "We turn ambition into",
+    "titleAccent": "progress you can measure.",
+    "supportingText": "We design and build websites and web apps, connect them to digital marketing, and measure every step toward your goals.",
+    "exploreWork": "Explore our work",
+    "exploreAll": "Explore all services",
+    "primaryCta": "Browse Services",
+    "socialLabel": "Social media",
+    "kinetic": {
+      "design": "Design",
+      "develop": "Develop",
+      "create": "Create",
+      "launch": "Launch"
+    },
+    "chooser": {
+      "label": "What do you want to build?"
+    }
+  },
+  
+  "brandIntro": {
+    "label": "Helaly brand introduction"
+  },
+  "home": {
+    "servicesTitle": "Let's Build What Your Project Needs.",
+    "servicesDescription": "Choose the request that matches your goal, and we will shape the solution around it.",
+    "servicesExplore": "Explore More Services",
+    "servicesRequest": "Request a Service",
+    "projectsTitle": "Selected work",
+    "projectsDescription": "A selection of projects will appear here as work is added to the portfolio."
+  },
+  "process": {
+    "eyebrow": "Our process",
+    "title": "A clear path from first conversation to delivery",
+    "description": "We move through focused stages, keeping the work collaborative and decisions clear from the first brief to the final handoff.",
+    "activeStage": "Current stage",
+    "stagesSummary": "Five clear stages, from discovery to delivery.",
+    "stepCounter": "Step {{number}} of {{total}}",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "description": "We learn about your goals, audience, constraints, and the vision behind the project."
+      },
+      "plan": {
+        "title": "Plan",
+        "description": "We clarify requirements, organize the scope, and agree on a practical direction."
+      },
+      "design": {
+        "title": "Design",
+        "description": "We shape the visual system, interface, and key user journeys around the brief."
+      },
+      "develop": {
+        "title": "Develop",
+        "description": "We build the agreed experience, connect its functionality, and check the key flows."
+      },
+      "deliver": {
+        "title": "Deliver",
+        "description": "We prepare the finished work for review and handoff, with the next steps clearly outlined."
+      }
+    }
+  },
+  "whyChooseUs": {
+    "eyebrow": "Why Helaly",
+    "title": "Thoughtful work, shaped around your project",
+    "description": "Clear thinking, considered design, and practical development guide how we approach each project.",
+    "coreMessage": "Built around your needs. Designed for real people.",
+    "values": {
+      "tailored": {
+        "title": "Tailored Solutions",
+        "description": "We shape scope, priorities, and implementation around the requirements of each project."
+      },
+      "userCentered": {
+        "title": "User-Centered Design",
+        "description": "We prioritize usability, clear navigation, and experiences that make sense to the people using them."
+      },
+      "performance": {
+        "title": "Performance-Focused Development",
+        "description": "We consider speed, responsive behavior, and maintainable implementation from the start."
+      },
+      "communication": {
+        "title": "Clear Communication",
+        "description": "We clarify requirements and expectations, and keep project communication straightforward."
+      }
+    }
+  },
+  "services": {
+    "detailsTitle": "Service Details",
+    "startThisProject": "Start This Project",
+    "startingPrice": "Starting price",
+    "pageTitle": "Our Services",
+    "pageDescription": "Explore the services Helaly offers, grouped by what they are meant to achieve.",
+    "search": {
+      "label": "Search services",
+      "placeholder": "Search by service name, description or category",
+      "resultsCount_one": "{{count}} service",
+      "resultsCount_other": "{{count}} services",
+      "noResultsTitle": "No services match your search",
+      "noResultsBody": "Try a different word, or clear the search to see every service.",
+      "clear": "Clear search",
+      "activeQuery": "Showing results for: {{query}}"
+    },
+    "carousel": {
+      "previous": "Previous services",
+      "next": "More services"
+    },
+    "categories": {
+      "all": "All services",
+      "navigationLabel": "Filter services by category",
+      "web-development": {
+        "title": "Web Development",
+        "description": "Websites and applications built for your needs."
+      },
+      "portfolio-websites": {
+        "title": "Portfolio websites",
+        "description": "Personal sites built to present your work."
+      },
+      "company-websites": {
+        "title": "Company websites",
+        "description": "Corporate sites built to earn trust."
+      },
+      "academy-websites": {
+        "title": "Academy websites",
+        "description": "Sites for courses, training centres and academies."
+      },
+      "restaurant-websites": {
+        "title": "Restaurant websites",
+        "description": "Menus, photos and location for restaurants and cafés."
+      },
+      "tourism-websites": {
+        "title": "Tourism websites",
+        "description": "Sites for trips, tours and travel packages."
+      },
+      "startup-websites": {
+        "title": "Startup websites",
+        "description": "Launch sites for new products and new companies."
+      },
+      "event-websites": {
+        "title": "Event websites",
+        "description": "Invitations and information pages for events."
+      },
+      "applications": {
+        "title": "Applications",
+        "description": "Custom web applications and internal systems built to run your business."
+      },
+      "ui-ux-design": {
+        "title": "UI/UX Design",
+        "description": "Digital product experiences shaped around people."
+      },
+      "digital-marketing": {
+        "title": "Digital Marketing",
+        "description": "Digital strategies to help your business reach its audience."
+      },
+      "small-business-websites": {
+        "title": "Small business websites",
+        "description": "Simple, professional websites for shops, local services and new businesses."
+      }
+    },
+    "empty": {
+      "title": "No services found",
+      "description": "There are no services available in this category yet."
+    },
+    "overview": {
+      "title": "Overview",
+      "audience": "Who it's for",
+      "challenges": "What it solves"
+    },
+    "included": {
+      "title": "What's included",
+      "description": "The elements this service can cover. We confirm the final scope with you before work begins."
+    },
+    "process": {
+      "eyebrow": "How it works",
+      "title": "From first conversation to delivery",
+      "description": "The stages we move through, scaled to the scope of your project."
+    },
+    "deliverables": {
+      "title": "What you receive",
+      "description": "What the handoff includes once the work is complete."
+    },
+    "relatedProjects": {
+      "title": "Related work"
+    },
+    "faq": {
+      "title": "Common questions",
+      "description": "Questions that come up when planning this kind of work."
+    },
+    "cta": {
+      "eyebrow": "Next step",
+      "title": "Ready to bring this idea to life?",
+      "description": "Tell us what you have in mind for {{service}} and we will shape the next step around it.",
+      "talk": "Talk to us first"
+    },
+    "items": {
+      "portfolio": {
+        "title": "Portfolio",
+        "intent": "I need a portfolio",
+        "shortDescription": "A personal site that shows your work properly.",
+        "previewDescription": "Showcase your work, highlight your skills, and create opportunities for your career.",
+        "overview": "A portfolio website presents your work the way you want it seen. We arrange the projects, write the page flow, and build a site a potential client can scan in a minute before getting in touch.",
+        "description": "A portfolio site is where your work is judged. We lay out your projects, write the page flow, and build a site a potential client can scan in a minute — with an obvious way to get in touch at the end of it.",
+        "features": {
+          "work": {
+            "title": "Featured work",
+            "description": "Your strongest projects placed first, so the opening screen does the persuading."
+          },
+          "projectPages": {
+            "title": "Project pages",
+            "description": "One page per project, covering the brief, your role and the outcome."
+          },
+          "aboutContact": {
+            "title": "About and contact",
+            "description": "Who you are, what you offer, and one clear way to reach you."
+          },
+          "responsive": {
+            "title": "Responsive layouts",
+            "description": "Comfortable and readable on phones and large screens."
+          }
+        },
+        "deliverables": {
+          "website": {
+            "title": "A live website",
+            "description": "Published on your own domain, ready to share."
+          },
+          "editable": {
+            "title": "Editable content",
+            "description": "Change text and images yourself, without a developer."
+          },
+          "handover": {
+            "title": "Handover session",
+            "description": "A short walkthrough and a written guide to keep."
+          }
+        }
+      },
+      "wedding": {
+        "title": "Wedding",
+        "intent": "I need a wedding invitation",
+        "shortDescription": "A digital invite your guests open with one link."
+      },
+      "startup": {
+        "title": "Startup",
+        "intent": "I need a site for my startup",
+        "shortDescription": "A landing page that explains your idea fast.",
+        "previewDescription": "Give your business a professional online presence and make it easier for customers to reach you."
+      },
+      "store": {
+        "title": "Store",
+        "intent": "I need an online store",
+        "shortDescription": "Show products, take orders, get paid online.",
+        "previewDescription": "Sell your products online and let customers order and pay with ease."
+      },
+      "corporate": {
+        "title": "Company",
+        "intent": "I need a website for my company",
+        "shortDescription": "A credible company website that builds trust with clients.",
+        "previewDescription": "Build your company's online presence and help potential clients discover your services.",
+        "overview": "A company website is where serious buyers check that you are real. We present who you are, what you offer and the proof behind it, in a structure that answers their questions before they get in touch.",
+        "features": {
+          "profile": {
+            "title": "Company profile",
+            "description": "Your story, your team and your credentials in one credible place."
+          },
+          "services": {
+            "title": "Services and solutions",
+            "description": "What you offer, organised so each visitor finds their own case."
+          },
+          "credibility": {
+            "title": "Proof and credentials",
+            "description": "Certificates, partners and references that support your claims."
+          },
+          "channels": {
+            "title": "Contact channels",
+            "description": "Phone, email and location details that make reaching you easy."
+          }
+        },
+        "deliverables": {
+          "website": {
+            "title": "A live website",
+            "description": "Published on your own domain, ready to share."
+          },
+          "pages": {
+            "title": "Core company pages",
+            "description": "Home, About, Services and Contact, written and built."
+          },
+          "handover": {
+            "title": "Handover session",
+            "description": "A short walkthrough and a written guide to keep."
+          }
+        }
+      },
+      "academy": {
+        "title": "Academy",
+        "intent": "I need a website for my academy",
+        "shortDescription": "A clear website for your courses and enrolment.",
+        "previewDescription": "Present your academy, showcase courses, and make student registration easier.",
+        "overview": "An academy website has to explain your courses and make enrolling simple. We present the programmes, the instructors and the enrolment steps in a structure that works for students and parents alike.",
+        "features": {
+          "courses": {
+            "title": "Course catalogue",
+            "description": "Every programme with its level, duration and what it covers."
+          },
+          "instructors": {
+            "title": "Instructor profiles",
+            "description": "Who teaches each course, and why students can trust them."
+          },
+          "enrollment": {
+            "title": "Enrolment route",
+            "description": "A simple way to register for a course or ask about one."
+          },
+          "mobile": {
+            "title": "Mobile-first pages",
+            "description": "Most students arrive on a phone, so the layout is built for that."
+          }
+        },
+        "deliverables": {
+          "website": {
+            "title": "A live website",
+            "description": "Published on your own domain, ready to share."
+          },
+          "catalog": {
+            "title": "Course catalogue",
+            "description": "Your programmes entered and organised for you."
+          },
+          "handover": {
+            "title": "Handover session",
+            "description": "A short walkthrough and a written guide to keep."
+          }
+        }
+      },
+      "restaurant": {
+        "title": "Restaurant",
+        "intent": "I need a website for my restaurant",
+        "shortDescription": "A restaurant website with the menu and how to find you."
+      },
+      "tourism": {
+        "title": "Tourism",
+        "intent": "I need a website for tourism",
+        "shortDescription": "Show your trips and packages, and take enquiries.",
+        "previewDescription": "Showcase destinations and travel packages while making booking inquiries easier."
+      },
+      "app": {
+        "title": "Web app",
+        "intent": "I need a web app",
+        "shortDescription": "A system or dashboard to run your business."
+      },
+      "uiux": {
+        "title": "UI/UX",
+        "intent": "I need a design for my app",
+        "shortDescription": "Clear interfaces and flows, ready to build."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "intent": "I need more customers",
+        "shortDescription": "Digital marketing that reaches the right people.",
+        "previewDescription": "Reach the right audience and turn attention into real enquiries.",
+        "overview": "Digital marketing puts your business in front of people who are already looking for what you sell. We plan the channels, build the content and campaigns, and report on what each one brings back.",
+        "description": "Digital marketing puts your business in front of people who are already looking for what you sell. We plan the channels, build the content and campaigns, and report on what each one brings back.",
+        "features": {
+          "plan": {
+            "title": "Channel plan",
+            "description": "Where to show up, and what each channel is expected to do."
+          },
+          "content": {
+            "title": "Content",
+            "description": "Pages and posts built around the questions your customers ask."
+          },
+          "campaigns": {
+            "title": "Paid campaigns",
+            "description": "Advertising set up, managed and adjusted month to month."
+          },
+          "reporting": {
+            "title": "Monthly reporting",
+            "description": "Spend, enquiries and cost per enquiry, in plain language."
+          }
+        },
+        "deliverables": {
+          "plan": {
+            "title": "Documented plan",
+            "description": "A channel plan you keep and can reuse."
+          },
+          "assets": {
+            "title": "Campaign assets",
+            "description": "Ad copy, creatives and the landing pages they point to."
+          },
+          "report": {
+            "title": "Monthly report",
+            "description": "Results in plain language, with next month's changes."
+          }
+        }
+      },
+      "smallBusiness": {
+        "title": "Small Business Website",
+        "intent": "I need a website for my small business",
+        "shortDescription": "A simple professional website that brings you customers.",
+        "previewDescription": "Present your services, reach new customers, and make it easier for people to contact you.",
+        "overview": "A small business website does one job: it tells people what you offer and how to reach you. We build a short, clear website around your business, so a customer who finds you on their phone understands what you do and starts a conversation in a minute.",
+        "description": "A small business website is where a new customer decides whether to get in touch. We present your business, arrange your services or products so they are easy to scan, and put your contact details — WhatsApp included — where a visitor can act on them straight away.",
+        "features": {
+          "design": {
+            "title": "Professional responsive design",
+            "description": "A clean, current design that adapts to phones, tablets and desktops."
+          },
+          "introduction": {
+            "title": "Business introduction",
+            "description": "An opening screen that says who you are and what you offer."
+          },
+          "about": {
+            "title": "About the business",
+            "description": "Your story, where you are based, and what makes you different."
+          },
+          "showcase": {
+            "title": "Services or products showcase",
+            "description": "What you offer, presented so a visitor can scan it quickly."
+          },
+          "contact": {
+            "title": "Contact information",
+            "description": "Phone, email and address placed where visitors look for them."
+          },
+          "whatsapp": {
+            "title": "WhatsApp contact",
+            "description": "A button that opens a WhatsApp chat with your business."
+          },
+          "social": {
+            "title": "Social media links",
+            "description": "Links to your active profiles, so visitors can follow you."
+          },
+          "mobile": {
+            "title": "Mobile-friendly layouts",
+            "description": "Built to be read and used on a phone first."
+          },
+          "seo": {
+            "title": "Basic SEO setup",
+            "description": "Page titles, descriptions and a share preview for every page."
+          },
+          "callsToAction": {
+            "title": "Clear calls to action",
+            "description": "An obvious next step on every page, so visitors know what to do."
+          }
+        },
+        "deliverables": {
+          "website": {
+            "title": "A completed responsive website",
+            "description": "Built, styled and checked on phone, tablet and desktop."
+          },
+          "pages": {
+            "title": "The agreed pages and sections",
+            "description": "Everything inside the scope you approve, written and built."
+          },
+          "contactMethods": {
+            "title": "Configured contact methods",
+            "description": "Your email, phone, WhatsApp and social links connected and tested."
+          },
+          "optionalFeatures": {
+            "title": "Your selected optional features",
+            "description": "Every upgrade you chose, included and working in the build."
+          },
+          "seo": {
+            "title": "Basic technical SEO",
+            "description": "Page titles, meta descriptions, share previews and a sitemap."
+          },
+          "handover": {
+            "title": "A tested, deployment-ready website",
+            "description": "Checked on real devices and handed over ready to publish on your domain."
+          }
+        }
+      }
+    },
+    "proposal": {
+      "documentLabel": "Service proposal",
+      "referenceLabel": "Reference",
+      "viewProposal": "Read the proposal",
+      "sections": {
+        "overview": "Service overview",
+        "objective": "Objectives",
+        "offers": "What this service offers",
+        "receive": "What you will receive",
+        "deliverables": "Key deliverables",
+        "details": "Project details",
+        "example": "Example project",
+        "exampleResults": "What the campaign delivered",
+        "optional": "Optional features",
+        "pricing": "Pricing summary"
+      },
+      "options": {
+        "note": "Add anything extra you need. Each selection is counted in the estimate below and carried into your request.",
+        "priceOnRequest": "Price on request"
+      },
+      "estimate": {
+        "base": "Base service",
+        "extras": "Selected extras",
+        "total": "Estimated total",
+        "none": "No extras selected.",
+        "pending": "Prices for this service are still being confirmed. Send the request and we will reply with a quotation."
+      },
+      "actions": {
+        "request": "Request this service",
+        "similar": "I want a similar project"
+      }
+    },
+    "proposals": {
+      "portfolio": {
+        "headline": "Turn your work into opportunities.",
+        "intro": "A portfolio that shows what you do and makes it easy for the right client to start a conversation. We handle the structure, the writing and the build.",
+        "overview": "A portfolio website presents your work the way you want it seen. We structure the projects, write the page flow, and build a site a potential client can scan in a minute before getting in touch.",
+        "offers": [
+          "A structure for your work: featured projects first, the rest organised by discipline or year",
+          "Project pages that show the problem, your role, and the outcome",
+          "A short about section, your services, and the way you prefer to be contacted",
+          "Responsive layouts that stay readable on phones and on large screens",
+          "Page titles, descriptions, and share previews so your name is findable"
+        ],
+        "receive": [
+          "A live website published on your own domain",
+          "Every page in English and Arabic if you need both",
+          "Editable text and images, so you can add a project yourself",
+          "A short handover session and a written guide"
+        ],
+        "deliverables": [
+          {
+            "title": "Home page",
+            "detail": "A clear first screen, featured work, and one obvious way to get in touch."
+          },
+          {
+            "title": "Project pages",
+            "detail": "One page per project, built to hold images, context, and results."
+          },
+          {
+            "title": "Contact route",
+            "detail": "A contact form and WhatsApp, so an enquiry reaches you directly."
+          },
+          {
+            "title": "Search basics",
+            "detail": "Page titles, descriptions, and a share preview for every page."
+          }
+        ],
+        "details": [
+          "Built for you and handed over, with no monthly platform fee",
+          "Content support: we can work from your existing files or from scratch",
+          "Two rounds of revisions on the design before development starts",
+          "Typical delivery is two to four weeks, depending on how many projects you show"
+        ]
+      },
+      "corporate": {
+        "headline": "Build trust. Strengthen your business presence.",
+        "intro": "A company website that answers a serious buyer's questions before they call. A clear structure, credible content, and an obvious way to reach you.",
+        "overview": "A company website is where serious buyers check that you are real. We present who you are, what you offer and the proof behind it, in a structure that answers their questions before they get in touch.",
+        "offers": [
+          "A structure built around your offer: who you are, what you do, and who you do it for",
+          "Service and solution pages organised so each visitor finds their own case",
+          "Proof that supports your claims: certificates, partners and client references",
+          "Contact channels in one place, so reaching the right person is immediate",
+          "Page titles, descriptions, and share previews so the company name is findable"
+        ],
+        "receive": [
+          "A live website published on your own domain",
+          "Every page in English and Arabic if you need both",
+          "Editable pages, so your team can publish updates without a developer",
+          "A short handover session and a written guide"
+        ],
+        "deliverables": [
+          {
+            "title": "Home page",
+            "detail": "A credible first screen: what you do, who you serve, and one clear next step."
+          },
+          {
+            "title": "Company pages",
+            "detail": "About, services and contact pages, written and built."
+          },
+          {
+            "title": "Proof section",
+            "detail": "Certificates, partners and references placed where they support your claims."
+          },
+          {
+            "title": "Search basics",
+            "detail": "Page titles, descriptions, and a share preview for every page."
+          }
+        ],
+        "details": [
+          "Built for you and handed over, with no monthly platform fee",
+          "Content support: we can work from your existing material or from scratch",
+          "Two rounds of revisions on the design before development starts",
+          "Typical delivery is two to four weeks, depending on the number of pages"
+        ]
+      },
+      "academy": {
+        "headline": "Give your academy the digital presence it deserves.",
+        "intro": "A website that explains your courses clearly and makes enrolling simple. Built for students and parents who arrive on a phone.",
+        "overview": "An academy website has to explain your courses and make enrolling simple. We present the programmes, the instructors and the enrolment steps in a structure that works for students and parents alike.",
+        "offers": [
+          "A course catalogue where every programme shows its level, duration and what it covers",
+          "Instructor profiles, so students know who is teaching them",
+          "An enrolment route: register for a course, or ask about it before deciding",
+          "Layouts built for phones first, because that is where most students arrive",
+          "Page titles, descriptions, and share previews so your courses are findable"
+        ],
+        "receive": [
+          "A live website published on your own domain",
+          "Your programmes entered and organised in a catalogue you can extend",
+          "Editable pages, so you can add a new course yourself",
+          "A short handover session and a written guide"
+        ],
+        "deliverables": [
+          {
+            "title": "Home page",
+            "detail": "What the academy teaches, who it is for, and how to enrol."
+          },
+          {
+            "title": "Course catalogue",
+            "detail": "Programmes, levels and durations, in one place a student can scan."
+          },
+          {
+            "title": "Instructor profiles",
+            "detail": "Who teaches each course and the experience behind them."
+          },
+          {
+            "title": "Enrolment route",
+            "detail": "A registration form and WhatsApp, so an enquiry reaches the right person."
+          }
+        ],
+        "details": [
+          "Built for you and handed over, with no monthly platform fee",
+          "Course content support: we work from your existing material or from scratch",
+          "Two rounds of revisions on the design before development starts",
+          "Typical delivery is two to four weeks, depending on how many courses you offer"
+        ]
+      },
+      "marketing": {
+        "headline": "Reach the people already looking for you.",
+        "intro": "A plan, the content, and the campaigns that bring qualified enquiries. We report what each channel returns, in plain language.",
+        "overview": "Digital marketing puts your business in front of the people who are already looking for what you sell. We plan the channels, create the content, and report on what each one brings back.",
+        "objective": "The aim is measurable demand, not visibility for its own sake. We agree a single number to move, whether that is qualified enquiries, booked calls, or online orders, and plan every activity against it.",
+        "offers": [
+          "A channel plan covering search, social, and paid advertising, chosen for your audience",
+          "Content built around the questions your customers actually ask",
+          "Campaign setup and ongoing management of paid advertising",
+          "Landing pages that match the message of each campaign",
+          "Monthly reporting on spend, enquiries, and cost per enquiry"
+        ],
+        "receive": [
+          "A documented plan you keep and can reuse",
+          "Live campaigns with the tracking needed to read the results",
+          "A monthly report in plain language, with what we will change next",
+          "Access to everything we build, including the advertising accounts"
+        ],
+        "deliverables": [
+          {
+            "title": "Channel plan",
+            "detail": "Which channels we use, what each one is for, and what it should cost."
+          },
+          {
+            "title": "Campaign assets",
+            "detail": "Ad copy, creatives, and the landing pages they point to."
+          },
+          {
+            "title": "Tracking",
+            "detail": "Conversion tracking configured so enquiries are attributed correctly."
+          },
+          {
+            "title": "Monthly report",
+            "detail": "Spend, enquiries, and cost per enquiry, with the next month's plan."
+          }
+        ],
+        "details": [
+          "Runs as a monthly engagement, with the first month spent on setup and testing",
+          "The advertising budget stays separate and stays under your control",
+          "Content and campaigns are produced in Arabic, English, or both",
+          "We report on real enquiries, not impressions"
+        ],
+        "example": "For example: a home-services company with a working website and almost no enquiries. We rebuilt the enquiry flow around a single service page, pointed a search campaign at it, and answered WhatsApp messages within the hour.",
+        "exampleResults": [
+          "Enquiries moved from a handful a month to a steady weekly flow",
+          "Cost per enquiry settled well below the value of a single job",
+          "The service page became the template for the company's other services"
+        ]
+      },
+      "smallBusiness": {
+        "headline": "Give Your Small Business a Professional Online Presence.",
+        "intro": "A website that presents your business properly, shows what you offer, and makes it easy for a customer to reach you. We agree the scope, build it, and hand it over ready to publish.",
+        "overview": "A small business website is where a new customer decides whether to contact you. We present your business, organise what you offer into sections a visitor can scan, and make sure your contact details are impossible to miss.",
+        "offers": [
+          "A structure built around your business: what you do, who you serve, and how to reach you",
+          "A services or products showcase, so a visitor sees your offer without having to ask",
+          "WhatsApp and contact details placed on every page, ready to be used",
+          "Layouts built for phones first, because that is where most customers arrive",
+          "Page titles and descriptions, so your business can be found by name and by service"
+        ],
+        "receive": [
+          "A live website published on your own domain",
+          "Your sections written and built, in the scope you approved",
+          "WhatsApp, contact details and social links connected and tested",
+          "A short handover session and a written guide"
+        ],
+        "deliverables": [
+          {
+            "title": "Home page",
+            "detail": "What you offer, who you serve, and one obvious way to get in touch."
+          },
+          {
+            "title": "Business pages",
+            "detail": "A short about section and a services or products page, written and built."
+          },
+          {
+            "title": "Contact route",
+            "detail": "WhatsApp and your contact details, so an enquiry reaches you directly."
+          },
+          {
+            "title": "Search basics",
+            "detail": "Page titles, descriptions, and a share preview for every page."
+          }
+        ],
+        "details": [
+          "Built for you and handed over, with no monthly platform fee",
+          "Content support: we work from what you already have, or write it with you",
+          "Two rounds of revisions on the design before development starts",
+          "Delivery is confirmed with the scope, and depends on how many pages we agree"
+        ]
+      }
+    },
+    "request": {
+      "prompts": {
+        "portfolio": "Tell us about the work you want to show.",
+        "wedding": "Tell us about the wedding: the names, the date, and any details your guests should see.",
+        "startup": "Tell us about your idea and what you are launching.",
+        "store": "Tell us what you sell and how you take orders today.",
+        "corporate": "Tell us about your company and what the website should achieve.",
+        "academy": "Tell us about your courses and how students enrol today.",
+        "restaurant": "Tell us about your restaurant, your menu and your opening hours.",
+        "tourism": "Tell us about your trips, your destinations and how customers book.",
+        "app": "Tell us what the system should do and who will use it.",
+        "uiux": "Tell us about the product you need designed.",
+        "marketing": "Tell us about your business and the customers you want to reach."
+      },
+      "fields": {
+        "eventDate": {
+          "label": "Wedding date",
+          "helper": "Optional. A date helps us plan the delivery timeline."
+        },
+        "productCount": {
+          "label": "How many products?",
+          "helper": "Optional. An approximate number is enough."
+        },
+        "goals": {
+          "label": "What should the marketing achieve?",
+          "helper": "Optional. For example: more enquiries, more online orders, or more walk-ins."
+        }
+      }
+    }
+  },
+  "work": {
+    "projectDetailsTitle": "Project Details",
+    "pageTitle": "Our Work",
+    "pageDescription": "Explore selected projects and the digital work behind them."
+  },
+  "request": {
+    "whatsapp": {
+      "submit": "Continue to WhatsApp",
+      "preparing": "Opening WhatsApp…",
+      "instructions": "Your request is ready. Continue in WhatsApp to send it — we receive it only when you press Send there.",
+      "message": {
+        "introduction": "Hello, I would like to submit a project request.",
+        "requestDetails": "*PROJECT DETAILS*",
+        "customerDetails": "*CONTACT INFORMATION*",
+        "closing": "Please review my request and get back to me. Thank you."
+      },
+      "validation": {
+        "categoryRequired": "Choose a service category.",
+        "serviceRequired": "Choose a service to continue.",
+        "nameRequired": "Enter your full name.",
+        "whatsappRequired": "Enter your WhatsApp number.",
+        "budgetInvalid": "Enter a valid budget amount of zero or more.",
+        "emailInvalid": "Enter a valid email address.",
+        "otherTimelineRequired": "Describe the timeframe you have in mind.",
+        "destinationUnavailable": "WhatsApp submission is temporarily unavailable. Please contact us through the Contact page."
+      }
+    },
+    "wizard": {
+      "description": "Confirm the service, tell us what you need, and send the request.",
+      "progressLabel": "Request progress",
+      "stepCounter": "Step {{current}} of {{total}}",
+      "stepAccessibleLabel": "Step {{number}}: {{title}}",
+      "currentStep": "Current step",
+      "back": "Back",
+      "continue": "Continue",
+      "errorSummary": "Check the highlighted details",
+      "selectedService": "Selected service",
+      "changeService": "Choose a different service",
+      "chooseService": "Which service do you need?",
+      "projectSectionTitle": "About your project",
+      "addonsSectionTitle": "Optional extras",
+      "addonsSectionDescription": "Only extras that fit this service are shown.",
+      "validation": {
+        "required": "This field is required.",
+        "serviceRequired": "Choose a service category and service to continue."
+      },
+      "steps": {
+        "step1": {
+          "title": "Service and project",
+          "description": "Confirm the service and tell us what you need. Only the essentials are asked."
+        },
+        "step2": {
+          "title": "Budget and timeline",
+          "description": "Share these if you have them in mind. Both are optional."
+        },
+        "step3": {
+          "title": "Your details",
+          "description": "Tell us how to reach you, then review and send the request."
+        }
+      }
+    },
+    "addons": {
+      "selectionSummary": "{{selected}} of {{total}} selected",
+      "noAvailable": "There are no additional services available for this selection.",
+      "items": {
+        "seoSetup": {
+          "title": "SEO Setup",
+          "description": "Set up essential search optimization for your website."
+        },
+        "whatsappIntegration": {
+          "title": "WhatsApp Integration",
+          "description": "Add a convenient way for visitors to contact you on WhatsApp."
+        },
+        "contactForm": {
+          "title": "Contact Form",
+          "description": "Give visitors a simple way to send you a message from your website."
+        },
+        "extraPages": {
+          "title": "Extra Pages",
+          "description": "Add more pages to support your website content."
+        },
+        "websiteMaintenance": {
+          "title": "Website Maintenance",
+          "description": "Keep your website maintained after launch."
+        }
+      }
+    },
+    "projectDetails": {
+      "optionalHint": "Optional",
+      "projectTypeLabel": "Project type",
+      "projectTypePlaceholder": "Choose a project type",
+      "descriptionLabel": "Project description",
+      "descriptionPlaceholder": "Describe what you need, key features, goals, references, or any other requirements.",
+      "descriptionHelper": "Mention the pages or features you need, any examples you like, and what is already in place.",
+      "descriptionCounter": "{{current}} / {{max}} characters",
+      "budgetLabel": "Expected budget",
+      "budgetPlaceholder": "Enter your expected budget",
+      "budgetHelper": "Optional. Leave it empty if you would rather discuss the budget with us.",
+      "currencyLabel": "Currency",
+      "currencyPlaceholder": "Choose a currency",
+      "currencyHelper": "Used for the budget above. Choose the currency you think in.",
+      "timelineLabel": "Expected timeline",
+      "timelinePlaceholder": "Choose a timeline",
+      "timelineHelper": "Optional. Choose the timeframe that best fits your plans.",
+      "otherTimelineLabel": "Specify your timeframe",
+      "otherTimelinePlaceholder": "For example, within three months"
+    },
+    "customer": {
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Enter your full name",
+      "whatsapp": "WhatsApp number",
+      "whatsappPlaceholder": "Enter your WhatsApp number",
+      "whatsappHelper": "Include your country code, for example +44 20 7946 0958.",
+      "email": "Email address",
+      "emailPlaceholder": "Enter your email address",
+      "emailHelper": "Optional"
+    },
+    "orderSummary": {
+      "title": "Request summary",
+      "edit": "Edit",
+      "sections": {
+        "service": "Service",
+        "project": "Project",
+        "budget": "Budget and timeline",
+        "addons": "Add-ons",
+        "contact": "Contact"
+      },
+      "category": "Service category",
+      "service": "Service",
+      "actualTotal": "Service and add-ons total",
+      "projectType": "Project type",
+      "addons": "Add-ons",
+      "projectDescription": "Project description",
+      "yourBudget": "Your budget",
+      "timeline": "Expected timeline",
+      "customerName": "Full name",
+      "whatsapp": "WhatsApp number",
+      "email": "Email address",
+      "notSelected": "Not selected",
+      "selectService": "Choose a service to include it in your summary.",
+      "noAddons": "No add-ons selected",
+      "quotationNotice": "Some prices are not available yet. We will provide a quotation after reviewing your request."
+    },
+    "project": {
+      "budget": "Budget",
+      "budgetPlaceholder": "Enter your estimated budget"
+    }
+  },
+  "requestOptions": {
+    "projectTypes": {
+      "newProject": "New project",
+      "redesign": "Redesign an existing project",
+      "improvement": "Improve an existing project",
+      "maintenanceSupport": "Maintenance and support",
+      "notSure": "Not sure yet"
+    },
+    "timelines": {
+      "asap": "As soon as possible",
+      "oneToTwoWeeks": "Within 1–2 weeks",
+      "twoToFourWeeks": "Within 2–4 weeks",
+      "oneToTwoMonths": "Within 1–2 months",
+      "flexible": "Flexible",
+      "other": "Other"
+    }
+  },
+  "packages": {
+    "pageEyebrow": "Fixed packages",
+    "pageTitle": "Ready-made packages with a clear scope and price",
+    "pageDescription": "Choose a predefined solution with a fixed base price, a defined scope and a clear delivery timeline. If your needs are different, the custom services path stays available.",
+    "whatsapp": {
+      "introduction": "Hello, I would like to order one of your fixed packages.",
+      "packageSection": "*PACKAGE*",
+      "detailsSection": "*PACKAGE DETAILS*",
+      "contactSection": "*CONTACT INFORMATION*",
+      "closing": "Please review my package request and get back to me. Thank you."
+    },
+    "catalog": {
+      "chooseTitle": "Custom service or ready-made package?",
+      "chooseBody": "Custom services start from your requirements, so scope and price are shaped with you. Fixed packages start from a published scope, price and delivery time, and you only confirm the details.",
+      "chooseServices": "Explore custom services",
+      "choosePackages": "Browse packages",
+      "count": "{{count}} packages available"
+    },
+    "card": {
+      "audienceLabel": "Who it's for",
+      "priceLabel": "Base price",
+      "deliveryLabel": "Delivery",
+      "revisionsLabel": "Revisions",
+      "revisionsValue": "{{count}} rounds",
+      "includesLabel": "Key deliverables",
+      "viewPackage": "View package",
+      "orderPackage": "Order this package"
+    },
+    "summary": {
+      "title": "Your selection",
+      "packageName": "Package",
+      "basePrice": "Base price",
+      "fixedAddons": "Fixed-price add-ons",
+      "subtotal": "Known subtotal",
+      "variableAddons": "Costs needing confirmation",
+      "startingFrom": "Starting from",
+      "atCost": "At cost — confirmed separately",
+      "noAddons": "No add-ons selected",
+      "notes": "Notes",
+      "customerName": "Full name",
+      "whatsapp": "WhatsApp number",
+      "variableNotice": "These costs depend on third parties and are confirmed before work begins.",
+      "disclaimer": "The subtotal covers the base price and the fixed-price add-ons only."
+    },
+    "addonPanel": {
+      "title": "Optional add-ons",
+      "description": "Optional extras. Only fixed-price add-ons change the subtotal.",
+      "fixed": "Fixed price",
+      "from": "Starting from",
+      "atCost": "At cost",
+      "selectedCount": "{{count}} selected"
+    },
+    "details": {
+      "backToPackages": "Back to packages",
+      "audienceTitle": "Who this package is for",
+      "scopeTitle": "Scope of work",
+      "deliverablesTitle": "Included deliverables",
+      "requirementsTitle": "What we need from you",
+      "deliveryTitle": "Delivery",
+      "revisionsTitle": "Revisions",
+      "revisionsValue": "Two revision rounds, both requested within seven days of delivery.",
+      "priceTitle": "Package price",
+      "startDelivery": "The delivery period begins after the 50% deposit and your complete information arrive.",
+      "termsTitle": "Order terms",
+      "relatedServicesTitle": "Need something different?",
+      "relatedServicesBody": "Packages cover predefined scopes. If your project needs a different scope, start from the custom services path and we will shape it with you.",
+      "relatedServicesCta": "Explore custom services",
+      "notFoundTitle": "Package not found",
+      "notFoundBody": "This package link does not match any package we offer."
+    },
+    "proposal": {
+      "documentLabel": "Package proposal",
+      "reference": "Reference",
+      "audience": "Intended customer",
+      "intro": "Introduction",
+      "scope": "Scope of work",
+      "deliverables": "Included deliverables",
+      "delivery": "Delivery duration",
+      "revisions": "Revision policy",
+      "requirements": "Customer requirements",
+      "addons": "Optional add-ons",
+      "notes": "Important notes",
+      "terms": "Terms",
+      "price": "Package base price"
+    },
+    "comparison": {
+      "title": "Compare packages",
+      "description": "A short view of how the four packages differ, so you can choose without reading four proposals.",
+      "audience": "Intended audience",
+      "outcome": "Main outcome",
+      "deliverables": "Key deliverables",
+      "delivery": "Delivery time",
+      "revisions": "Revision rounds",
+      "price": "Base price",
+      "note": "These packages target different customers rather than ascending tiers. A higher price does not mean it includes everything in a cheaper package.",
+      "toggle": "Compare packages",
+      "moreDeliverables": "+{{count}} more"
+    },
+    "form": {
+      "title": "Send your package request",
+      "description": "A short form for this package. We follow up on WhatsApp once you send it.",
+      "selectedPackage": "Selected package",
+      "selectPlaceholder": "Choose…",
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Enter your full name",
+      "whatsapp": "WhatsApp number",
+      "whatsappPlaceholder": "Enter your WhatsApp number",
+      "whatsappHelper": "Include your country code, for example +20 127 653 9981.",
+      "notes": "Notes",
+      "notesPlaceholder": "Anything else we should know before we start.",
+      "optional": "Optional",
+      "submit": "Continue to WhatsApp",
+      "preparing": "Opening WhatsApp…",
+      "instructions": "Your package request is ready. Continue in WhatsApp to send it.",
+      "reviewNote": "This step only prepares the message. It is sent once you press Send in WhatsApp.",
+      "destinationUnavailable": "The WhatsApp destination is not configured yet, so the final step is disabled. The form stays available for review.",
+      "errorsTitle": "Check the highlighted details",
+      "errors": {
+        "packageRequired": "Choose a package to continue.",
+        "nameRequired": "Enter your full name.",
+        "whatsappRequired": "Enter your WhatsApp number.",
+        "fieldRequired": "This field is required.",
+        "urlInvalid": "Enter a full link starting with http:// or https://."
+      }
+    },
+    "faq": {
+      "title": "Package questions",
+      "description": "How ordering, delivery, revisions and refunds work.",
+      "items": {
+        "deliveryStart": {
+          "question": "When does the delivery time begin?",
+          "answer": "The delivery period starts once we have received the 50% deposit and all the customer information the package requires."
+        },
+        "deposit": {
+          "question": "What deposit is required?",
+          "answer": "A 50% deposit is required to begin. The remaining amount is due on delivery, and the balance is paid before the final files are handed over or the site goes live."
+        },
+        "paymentMethods": {
+          "question": "Which payment methods are accepted?",
+          "answer": "InstaPay, e-wallets and bank transfer."
+        },
+        "revisions": {
+          "question": "How many revisions are included?",
+          "answer": "Two revision rounds are included. Both rounds must be requested within seven days of delivery. Later changes use the configured add-on pricing."
+        },
+        "ownership": {
+          "question": "Who owns the final work?",
+          "answer": "You own the delivered files and the website, and the domain is registered in your name. Third-party services and domain costs are charged at cost."
+        },
+        "thirdParty": {
+          "question": "Are domains and third-party services included?",
+          "answer": "No. A custom domain and any third-party service are charged at cost, and the amount is confirmed separately rather than added to the package price."
+        },
+        "guarantees": {
+          "question": "Are jobs, clients, sales or search rankings guaranteed?",
+          "answer": "No. No job placement, client acquisition, sales or search ranking is guaranteed. The packages deliver the listed work, not a commercial outcome."
+        },
+        "cancellation": {
+          "question": "What happens if I cancel?",
+          "answer": "Before work starts, the deposit is refunded in full. After work starts, the completed portion of the work is charged."
+        }
+      }
+    },
+    "terms": {
+      "title": "Order terms",
+      "description": "The commercial terms that apply to every package order.",
+      "payment": {
+        "title": "Payment",
+        "body": "A 50% deposit is required to begin.\nThe remaining amount is due on delivery.\nThe balance is paid before the final files are handed over or the site goes live.\nAccepted methods: InstaPay, e-wallets and bank transfer."
+      },
+      "delivery": {
+        "title": "Delivery",
+        "body": "The delivery period begins after receiving the 50% deposit.\nIt also begins after receiving all the customer information the package requires."
+      },
+      "revisions": {
+        "title": "Revisions",
+        "body": "Two revision rounds are included.\nBoth rounds must be requested within seven days of delivery.\nAdditional changes use the configured add-on pricing."
+      },
+      "ownership": {
+        "title": "Ownership",
+        "body": "The client owns the delivered files and the website.\nThe domain is registered in the client's name.\nThird-party services and domain costs are charged at cost."
+      },
+      "guarantees": {
+        "title": "Guarantees",
+        "body": "No guaranteed job placement.\nNo guaranteed client acquisition.\nNo guaranteed sales.\nNo guaranteed search ranking."
+      },
+      "refunds": {
+        "title": "Refunds",
+        "body": "Before work starts: the deposit is refunded in full.\nAfter work starts: the work actually completed is charged."
+      }
+    },
+    "fields": {
+      "targetRole": "Target field or job role",
+      "cvOrLinkedin": "CV or LinkedIn link",
+      "fileLanguage": "Desired file language",
+      "experienceLevel": "Experience level",
+      "professionalField": "Professional field",
+      "platformsUsed": "Freelance platforms you use",
+      "workLinks": "Links to your work",
+      "targetRegion": "Target client region",
+      "businessName": "Business name",
+      "businessType": "Business type",
+      "city": "City",
+      "socialPageLink": "Facebook or Instagram page link",
+      "hasLogo": "Do you have a logo?",
+      "hasGoogleProfile": "Do you have a Google Business Profile?",
+      "storeName": "Store name",
+      "productType": "Product type",
+      "productQuantity": "Approximate number of products",
+      "shippingGovernorates": "Shipping governorates"
+    },
+    "options": {
+      "language": {
+        "ar": "Arabic",
+        "en": "English",
+        "both": "Both"
+      },
+      "experience": {
+        "fresh": "Fresh graduate",
+        "oneToThree": "1–3 years",
+        "threeToFive": "3–5 years",
+        "fivePlus": "5+ years"
+      },
+      "region": {
+        "egypt": "Egypt",
+        "gulf": "Gulf",
+        "global": "Global"
+      },
+      "yesNo": {
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "addons": {
+      "customDomain": {
+        "title": "Custom domain",
+        "note": "At cost — the domain fee is confirmed separately and the domain is registered in your name."
+      },
+      "secondLanguage": {
+        "title": "Second website language"
+      },
+      "fastDelivery": {
+        "title": "48-hour delivery"
+      },
+      "extraCvVersion": {
+        "title": "Extra CV version for another role"
+      },
+      "extraPlatform": {
+        "title": "Extra freelance platform profile"
+      },
+      "extraCaseStudy": {
+        "title": "Extra case study"
+      },
+      "bilingualWebsite": {
+        "title": "Bilingual website"
+      },
+      "englishVersion": {
+        "title": "English version"
+      },
+      "additionalPage": {
+        "title": "Additional page"
+      },
+      "visualIdentity": {
+        "title": "Simple visual identity (logo, colors, fonts)"
+      },
+      "extraProducts": {
+        "title": "Upload another 25 products"
+      },
+      "discountCodes": {
+        "title": "Discount codes"
+      },
+      "orderTracking": {
+        "title": "Order tracking page"
+      },
+      "cardPayments": {
+        "title": "Online card payments",
+        "note": "Starting from 2,000 EGP. Requires a merchant account with a payment provider, so the final cost is confirmed separately. Card payment is not activated automatically."
+      }
+    },
+    "items": {
+      "careerLaunch": {
+        "name": "Career Launch",
+        "audienceLabel": "For graduates and job seekers",
+        "tagline": "Your complete professional profile in one place, ready to apply.",
+        "promise": "Your complete professional profile in one place, ready to apply.",
+        "intro": "A complete starting kit for anyone entering the job market: a CV that passes screening software, a stronger LinkedIn profile, a personal portfolio page and a digital business card — in Arabic and English.",
+        "delivery": "5 working days after receiving complete information",
+        "audienceItems": {
+          "graduates": "Fresh graduates",
+          "jobSeekers": "Job seekers",
+          "careerSwitchers": "Career switchers"
+        },
+        "deliverables": {
+          "atsCv": {
+            "title": "ATS-friendly professional CV in Arabic and English",
+            "detail": "Delivered as PDF and Word so you can keep editing it."
+          },
+          "linkedin": {
+            "title": "LinkedIn profile improvement",
+            "detail": "Headline, About section, experience, skills and a designed cover image."
+          },
+          "portfolio": {
+            "title": "One-page responsive personal portfolio website",
+            "detail": "A single page that presents you on mobile and desktop."
+          },
+          "businessCard": {
+            "title": "Digital business card with QR code",
+            "detail": "Share your profile with one scan."
+          },
+          "coverLetter": {
+            "title": "Editable Cover Letter template",
+            "detail": "A starting point you can adapt for each application."
+          }
+        },
+        "requirements": {
+          "existingCv": "Your existing CV, if you have one",
+          "linkedinUrl": "Your LinkedIn URL",
+          "targetRole": "The role or field you are targeting",
+          "achievements": "Three to five achievements or projects"
+        },
+        "notes": {}
+      },
+      "freelancerPro": {
+        "name": "Freelancer Pro",
+        "audienceLabel": "For independent freelancers",
+        "tagline": "Present your work in a way that makes clients trust you and hire you.",
+        "promise": "Present your work in a way that makes clients trust you and hire you.",
+        "intro": "A complete client-facing presence for independent professionals: a portfolio website, rewritten profiles on two freelance platforms, a client-oriented CV and the templates you need to win and manage projects.",
+        "delivery": "7–10 working days after receiving complete information",
+        "audienceItems": {
+          "developers": "Developers",
+          "designers": "Designers",
+          "videoEditors": "Video editors",
+          "writers": "Writers",
+          "translators": "Translators",
+          "marketers": "Marketers",
+          "independentFreelancers": "Independent freelancers"
+        },
+        "deliverables": {
+          "portfolioSite": {
+            "title": "Portfolio website",
+            "detail": "Home, Services, three case studies, About and Contact, as described in the source catalogue."
+          },
+          "freelanceProfiles": {
+            "title": "Rewritten profiles on two freelance platforms",
+            "detail": "For example Upwork, Fiverr, Mostaql or Khamsat."
+          },
+          "clientCv": {
+            "title": "English CV oriented toward clients",
+            "detail": "Framed around the outcomes a client is buying."
+          },
+          "linkedin": {
+            "title": "Improved LinkedIn headline and About section",
+            "detail": "Sharper positioning for the clients you want."
+          },
+          "proposalTemplates": {
+            "title": "Three editable proposal templates",
+            "detail": "A consistent way to answer project requests."
+          },
+          "rateCard": {
+            "title": "Rate card",
+            "detail": "Your services and prices in one clear document."
+          },
+          "reviewRequest": {
+            "title": "Ready-made client review request message",
+            "detail": "A short message you can send after delivery."
+          },
+          "discoveryQuestionnaire": {
+            "title": "Project discovery questionnaire",
+            "detail": "The questions to ask before quoting a project."
+          }
+        },
+        "requirements": {
+          "previousWork": "Links to your previous work",
+          "servicesAndPrices": "Your existing services and prices",
+          "targetClients": "The clients you want to reach",
+          "platformUrls": "Your freelance platform profile URLs"
+        },
+        "notes": {
+          "scopeInconsistency": "Content note: the source catalogue describes the portfolio as five pages, but the listed items (Home, Services, three case studies, About, Contact) can count as seven pages depending on how case studies are structured. The original wording is kept and this needs owner confirmation before publication."
+        }
+      },
+      "digitalPresence": {
+        "name": "Digital Presence",
+        "audienceLabel": "For local businesses",
+        "tagline": "When customers search for you, they find a professional business they can trust.",
+        "promise": "When customers search for you, they find a professional business they can trust.",
+        "intro": "A five-page Arabic website for a local business, connected to WhatsApp and calls, with a Google Business Profile set up and one year of hosting included.",
+        "delivery": "7–10 working days after receiving complete information",
+        "audienceItems": {
+          "shops": "Shops",
+          "clinics": "Clinics",
+          "centers": "Centers",
+          "restaurants": "Restaurants",
+          "gyms": "Gyms",
+          "homeBased": "Home-based businesses",
+          "localBusinesses": "Local businesses"
+        },
+        "deliverables": {
+          "arabicWebsite": {
+            "title": "Five-page Arabic website",
+            "detail": "Home, Services or Menu, About with an image gallery, Reviews and FAQ, and Contact."
+          },
+          "contactButtons": {
+            "title": "WhatsApp and Call buttons across pages",
+            "detail": "Visitors reach you from any page."
+          },
+          "bookingForm": {
+            "title": "Booking or inquiry form that prepares a WhatsApp message",
+            "detail": "The form prepares the message; you receive it in WhatsApp."
+          },
+          "googleBusiness": {
+            "title": "Google Business Profile setup and optimization",
+            "detail": "Location, opening hours, services and photo guidance."
+          },
+          "qrCode": {
+            "title": "Print-ready QR code",
+            "detail": "For your shopfront, packaging or printed material."
+          },
+          "basicSeo": {
+            "title": "Basic SEO setup",
+            "detail": "Search essentials for the pages you receive."
+          },
+          "socialLinking": {
+            "title": "Facebook and Instagram account linking",
+            "detail": "Your social profiles connected to the website."
+          },
+          "hosting": {
+            "title": "One year of hosting",
+            "detail": "Included for the first year."
+          },
+          "support": {
+            "title": "Thirty days of support for minor edits after delivery",
+            "detail": "Starts from the delivery date."
+          }
+        },
+        "requirements": {
+          "businessName": "Business name",
+          "logo": "Logo, if you have one",
+          "servicesAndPrices": "Your services or products and their prices",
+          "photos": "Real photos of the business",
+          "address": "Address",
+          "openingHours": "Opening hours",
+          "socialUrls": "Your social profile URLs"
+        },
+        "notes": {
+          "googleVerification": "Important: Google Business Profile activation depends on Google's verification process. You must own the business or be authorized to manage it. Successful verification is not promised."
+        }
+      },
+      "quickStore": {
+        "name": "Quick Store",
+        "audienceLabel": "For social sellers",
+        "tagline": "Turn your social page into an organized store, with orders landing on your WhatsApp.",
+        "promise": "Turn your social page into an organized store, with orders landing on your WhatsApp.",
+        "intro": "An online store for sellers who already sell through Facebook, Instagram, TikTok or WhatsApp: up to 25 products, a cart, shipping by governorate and orders that arrive as a WhatsApp summary.",
+        "delivery": "10–14 working days after receiving complete information",
+        "audienceItems": {
+          "facebook": "Sellers on Facebook",
+          "instagram": "Sellers on Instagram",
+          "tiktok": "Sellers on TikTok",
+          "whatsapp": "Sellers on WhatsApp"
+        },
+        "deliverables": {
+          "store": {
+            "title": "Online store with up to 25 products",
+            "detail": "A mobile-first store built for how your customers already browse."
+          },
+          "productContent": {
+            "title": "Product images and prices",
+            "detail": "Your product photos and prices entered for you."
+          },
+          "variants": {
+            "title": "Product sizes or colors",
+            "detail": "Variants customers can choose before ordering."
+          },
+          "categoriesSearch": {
+            "title": "Categories and product search",
+            "detail": "So visitors find a product without scrolling the whole store."
+          },
+          "cart": {
+            "title": "Shopping cart",
+            "detail": "Customers collect items before sending the order."
+          },
+          "orderForm": {
+            "title": "Order form preparing a WhatsApp order summary",
+            "detail": "The order arrives on your WhatsApp as a structured summary."
+          },
+          "shipping": {
+            "title": "Shipping prices by Egyptian governorate",
+            "detail": "Each governorate can carry its own shipping price."
+          },
+          "cod": {
+            "title": "Cash-on-delivery support",
+            "detail": "For customers who pay when the order arrives."
+          },
+          "instapay": {
+            "title": "InstaPay or e-wallet transfer details display",
+            "detail": "Your transfer details shown at checkout."
+          },
+          "productManagement": {
+            "title": "Product management",
+            "detail": "Add, edit and hide products yourself."
+          },
+          "mobileFirst": {
+            "title": "Mobile-first design",
+            "detail": "Built and checked on a phone screen first."
+          },
+          "metaPixel": {
+            "title": "Meta Pixel installation readiness",
+            "detail": "The store is prepared so the pixel can be added."
+          },
+          "hosting": {
+            "title": "One year of hosting",
+            "detail": "Included for the first year."
+          }
+        },
+        "requirements": {
+          "storeName": "Store name",
+          "logo": "Logo",
+          "productList": "Your product list",
+          "productImages": "Product images and prices",
+          "shippingGovernorates": "The governorates you ship to",
+          "shippingPrices": "Your shipping prices",
+          "paymentMethods": "The payment methods you accept"
+        },
+        "notes": {
+          "cardPaymentsMerchant": "Important: online card payments require a merchant account with a payment provider. Card payment is not activated automatically."
+        }
+      }
+    }
+  },
+  "projects": {
+    "empty": {
+      "title": "Projects coming soon",
+      "description": "Project examples will appear here when portfolio information is available."
+    },
+    "technologiesLabel": "Technologies used",
+    "liveDemo": "View live demo",
+    "openDemo": "Open the live demo for {{title}}",
+    "repository": "Source code",
+    "openRepository": "Open the source code for {{title}} in a new tab",
+    "overview": "Overview",
+    "challenge": "The challenge",
+    "solution": "The solution",
+    "features": "Key features",
+    "gallery": "Gallery",
+    "previousProject": "Previous project",
+    "nextProject": "Next project",
+    "startSimilar": "Start a similar project",
+    "openImage": "Enlarge image {{current}}: {{alt}}",
+    "viewerLabel": "Image viewer for {{title}}",
+    "closeViewer": "Close image viewer",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "imageCounter": "Image {{current}} of {{total}}"
+  },
+  "about": {
+    "pageTitle": "About Helaly"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions clients ask before they begin",
+    "description": "A clear overview of how Helaly works, what we build, and how projects move forward.",
+    "items": {
+      "webSolutions": {
+        "question": "What types of websites and digital solutions do you offer?",
+        "answer": "Helaly works on business websites, landing pages, marketing-focused experiences, and digital systems designed around clear business goals. Each project is shaped around the needs of the brand, the audience, and the experience you want to create."
+      },
+      "startProject": {
+        "question": "How do I start a project?",
+        "answer": "The easiest next step is to share your request through the project form. We review the details, understand your goals, and use that information to shape the right direction for your website or digital experience."
+      },
+      "businessTailored": {
+        "question": "Can I request a website tailored to my business?",
+        "answer": "Yes. Every project is planned around your business goals, audience, and priorities. We tailor the structure, messaging, and experience so it reflects your brand rather than using a one-size-fits-all approach."
+      },
+      "responsiveDesign": {
+        "question": "Will my website work on mobile, tablet, and desktop?",
+        "answer": "Responsive design is part of how we approach digital experiences. We aim to make the site comfortable and usable across common screen sizes so visitors have a consistent experience on mobile, tablet, and desktop."
+      },
+      "changesDuringProject": {
+        "question": "Can I request changes during the project?",
+        "answer": "Yes, collaboration is part of the process. We review changes as the project develops, clarify priorities, and keep the scope aligned so the final experience supports the original goals without unnecessary confusion."
+      },
+      "examples": {
+        "question": "Can I see examples of previous work?",
+        "answer": "We can share relevant examples and project context when available. This helps clarify the type of work, visual direction, and digital experience we can help create for your business."
+      },
+      "projectCost": {
+        "question": "How is the project cost determined?",
+        "answer": "Project pricing depends on the scope, complexity, and requirements of the work. We review the project goals, the services involved, and the level of customization needed before proposing a suitable approach."
+      },
+      "contactBeforeRequest": {
+        "question": "How can I contact you before submitting a request?",
+        "answer": "You can reach out through the contact page or start with a project request if you already know what you need. Either way, we are happy to learn more about your goals before moving forward."
+      }
+    },
+    "ctaTitle": "Still have a question?",
+    "ctaDescription": "Let’s talk about your project and shape a digital solution around your goals.",
+    "ctaButton": "Start a project"
+  },
+  "finalCta": {
+    "eyebrow": "Ready when you are",
+    "title": "Have a project in mind?",
+    "description": "Let’s turn your idea into a digital experience designed around your goals, your audience, and the next stage of your business.",
+    "primaryCta": "Start a Project",
+    "secondaryCta": "Explore Services"
+  },
+  "errors": {
+    "notFoundTitle": "Page Not Found"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "We craft thoughtful digital experiences that help businesses move forward.",
+    "quickLinks": "Quick Links",
+    "whatsapp": "WhatsApp Business",
+    "whatsappLabel": "Chat with us on WhatsApp",
+    "businessEmail": "Business Email",
+    "phone": "Phone Number",
+    "getInTouch": "Get in Touch",
+    "connectWithUs": "Connect With Us",
+    "followUs": "Follow us on social media.",
+    "viewAllServices": "View All Services"
+  }
+}

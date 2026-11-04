@@ -1,0 +1,668 @@
+@import "tailwindcss";
+
+/* dark: utilities follow the site's theme toggle (data-theme), not the OS setting. */
+@custom-variant dark (&:where(html:not([data-theme="light"]) *));
+
+/* ========================================
+   HELALY - DESIGN TOKENS
+   Identity: neutral-first. Black, white and neutral greys carry the
+   experience; neon mint is a limited accent for the moments that matter.
+   Dark is the default; light is a calm neutral white.
+======================================== */
+
+/* ========================================
+   SERVICE HERO PALETTE
+   The hero shares the website's own colour language instead of carrying a
+   second identity: a black/white/grey foundation plus one mint accent. It also
+   shares the page's *tone* — the luminous ramp while the site is light, the
+   deep ramp while it is dark — so it stays monochrome and never fights the
+   theme it is painted on.
+======================================== */
+
+:root {
+  /* Monochrome ink ramp, shared by both tones. */
+  --hero-navy: #0A0A0B;
+  --hero-dark-surface: #17171A;
+  --hero-white: #FAFAFA;
+
+  /* The single accent, in the two weights the tones need to stay legible:
+     #007A66 on #F4F4F5 is 4.8:1 (AA); #00E5C0 on #101012 is 12.2:1. */
+  --hero-mint-on-light: #007A66;
+  --hero-mint-on-dark: #00E5C0;
+
+  /* Luminous tone — used while the site is light */
+  --hero-bright-start: #FFFFFF;
+  --hero-bright-canvas: #F4F4F5;
+  --hero-bright-end: #E4E4E7;
+  --hero-bright-ink: var(--hero-navy);
+  --hero-bright-accent: var(--hero-mint-on-light);
+  --hero-bright-muted: #5C5C66;
+  /* The big surfaces stay neutral; only the small motif carries the accent. */
+  --hero-bright-glow: rgba(10, 10, 11, 0.05);
+  --hero-bright-glow-soft: rgba(10, 10, 11, 0.03);
+  --hero-bright-accent-glow: rgba(0, 122, 102, 0.14);
+  --hero-bright-accent-glow-soft: rgba(0, 122, 102, 0.08);
+  --hero-bright-line: rgba(10, 10, 11, 0.1);
+  --hero-bright-line-strong: rgba(10, 10, 11, 0.22);
+  --hero-bright-grid: rgba(10, 10, 11, 0.04);
+  --hero-bright-fill: rgba(255, 255, 255, 0.58);
+  --hero-bright-fill-strong: rgba(255, 255, 255, 0.84);
+
+  /* Deep tone — used while the site is dark */
+  --hero-deep-start: #0B0B0C;
+  --hero-deep-canvas: #101012;
+  --hero-deep-end: #1A1A1D;
+  --hero-deep-ink: var(--hero-white);
+  --hero-deep-accent: var(--hero-mint-on-dark);
+  --hero-deep-muted: #A6A6AD;
+  --hero-deep-glow: rgba(255, 255, 255, 0.07);
+  --hero-deep-glow-soft: rgba(255, 255, 255, 0.04);
+  --hero-deep-accent-glow: rgba(0, 229, 192, 0.34);
+  --hero-deep-accent-glow-soft: rgba(0, 229, 192, 0.16);
+  --hero-deep-line: rgba(255, 255, 255, 0.14);
+  --hero-deep-line-strong: rgba(255, 255, 255, 0.28);
+  --hero-deep-grid: rgba(255, 255, 255, 0.05);
+  --hero-deep-fill: rgba(255, 255, 255, 0.06);
+  --hero-deep-fill-strong: rgba(255, 255, 255, 0.12);
+}
+
+:root,
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Foundations: true neutral near-black. Mint is an accent, so it must
+     never tint the surfaces it sits on. */
+  --background: #0A0A0B;
+  --surface: #121214;
+  --surface-raised: #1B1B1E;
+
+  /* Neon Mint — the single accent: small details, states and interactions. */
+  --brand: #00E5C0;          /* accents, selected states, indicators */
+  --brand-bright: #33FFDE;   /* accent hover */
+  --brand-light: #99FFF0;    /* accent text on dark */
+  --brand-deep: #006B5A;     /* accent edge / deep glass */
+  --on-brand: #011A16;       /* text and icons placed ON a mint fill */
+
+  /* Neutral-first action pair: white on dark, black on light. The primary
+     CTA stays the strongest element without a coloured fill. */
+  --action-bg: #FAFAFA;
+  --action-ink: #0A0A0B;
+  --action-hover-bg: #DEDEDF;
+
+  /* Legacy names: every existing component using blue now resolves to the cyan identity */
+  --blue-electric: var(--brand);
+  --blue-bright: var(--brand-bright);
+  --blue-light: var(--brand-light);
+
+  /* Secondary identity */
+  --neon: #00E5C0;
+  --neon-ink: #00E5C0;
+
+  /* Semantic status colors */
+  --warning: #F59E0B;
+
+  /* Typography */
+  --text-primary: #FAFAFA;
+  --text-secondary: #A6A6AD;
+
+  /* Borders and ambient effects. Ambient light is neutral: it adds depth,
+     it does not add colour. */
+  --border: rgba(255, 255, 255, 0.1);
+  --blue-glow: rgba(255, 255, 255, 0.06);
+  --neon-glow: rgba(0, 229, 192, 0.07);
+  --blue-radial-glow: radial-gradient(
+    ellipse at center,
+    var(--blue-glow),
+    transparent 70%
+  );
+  --blue-subtle-gradient: linear-gradient(
+    135deg,
+    rgba(0, 229, 192, 0.14),
+    rgba(0, 107, 90, 0.05) 55%,
+    transparent
+  );
+  --ambient-brand-glow:
+    radial-gradient(ellipse at 20% 20%, var(--blue-glow), transparent 55%),
+    radial-gradient(ellipse at 80% 80%, var(--neon-glow), transparent 55%);
+
+  /* The service hero follows the site theme, so while the site is dark it runs
+     on the deep tone. Only the decorative anchors are hero-specific: the
+     surfaces, ink and borders now come from the page's own tokens. */
+  --hero-ink: var(--hero-deep-ink);
+  --hero-motif-accent: var(--hero-deep-accent-glow);
+  --hero-motif-accent-soft: var(--hero-deep-accent-glow-soft);
+  --hero-watermark-ink: var(--hero-deep-ink);
+  --hero-watermark-opacity: 0.08;
+
+  /* Layout */
+  --navbar-height: 4.5rem;
+
+  /* Typography */
+  --font-family-en: "Manrope Variable", sans-serif;
+  --font-family-ar: "Cairo Variable", sans-serif;
+  --font-family: var(--font-family-en);
+
+  /* Type scale */
+  --size-display: clamp(3.5rem, 8vw, 7.5rem);
+  --size-heading-xl: clamp(2.5rem, 5vw, 4.5rem);
+  --size-heading-lg: clamp(2rem, 4vw, 3.25rem);
+  --size-heading-md: clamp(1.5rem, 2.5vw, 2rem);
+  --size-body: 1rem;
+  --size-small: 0.875rem;
+  --line-height-display: 1.05;
+  --line-height-heading: 1.15;
+  --line-height-body: 1.7;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+
+  /* Foundations: white and neutral greys, no colour cast */
+  --background: #F6F6F7;
+  --surface: #FFFFFF;
+  --surface-raised: #EDEDEF;
+
+  --text-primary: #0B0B0C;
+  --text-secondary: #55555C;
+
+  --border: rgba(11, 11, 12, 0.12);
+
+  /* Neon Mint on light surfaces. `brand` is a fill colour here, so accent
+     *text* always uses `brand-light` (#00594A, 8.3:1 on white). */
+  --brand: #00B395;
+  --brand-bright: #008F77;   /* accent hover goes deeper on white */
+  --brand-light: #00594A;    /* accent text on light */
+  --brand-deep: #006B5A;
+  --on-brand: #011A16;       /* dark ink on the mint fill: 7:1, not 2.7:1 */
+
+  /* Neutral-first action pair, inverted for light surfaces. */
+  --action-bg: #0A0A0B;
+  --action-ink: #FFFFFF;
+  --action-hover-bg: #2E2E33;
+
+  --blue-electric: var(--brand);
+  --blue-bright: var(--brand-bright);
+  --blue-light: var(--brand-light);
+
+  --neon: #00B395;
+  --neon-ink: #00594A;
+
+  --warning: #D97706;
+
+  --blue-glow: rgba(11, 11, 12, 0.05);
+  --neon-glow: rgba(0, 179, 149, 0.06);
+  --blue-radial-glow: radial-gradient(
+    ellipse at center,
+    var(--blue-glow),
+    transparent 70%
+  );
+  --blue-subtle-gradient: linear-gradient(
+    135deg,
+    rgba(0, 179, 149, 0.1),
+    rgba(0, 107, 90, 0.03) 55%,
+    transparent
+  );
+  --ambient-brand-glow:
+    radial-gradient(ellipse at 20% 20%, var(--blue-glow), transparent 55%),
+    radial-gradient(ellipse at 80% 80%, var(--neon-glow), transparent 55%);
+
+  /* The service hero follows the site theme, so while the site is light it runs
+     on the luminous tone. */
+  --hero-ink: var(--hero-bright-ink);
+  --hero-motif-accent: var(--hero-bright-accent-glow);
+  --hero-motif-accent-soft: var(--hero-bright-accent-glow-soft);
+  --hero-watermark-ink: var(--hero-bright-ink);
+  --hero-watermark-opacity: 0.07;
+}
+
+html[lang="ar"] {
+  --font-family: var(--font-family-ar);
+}
+
+html[lang="en"] {
+  --font-family: var(--font-family-en);
+}
+
+/* ========================================
+   TAILWIND THEME MAPPING (Tailwind CSS v4)
+======================================== */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+
+  /* Brand cyan utilities */
+  --color-brand: var(--brand);
+  --color-brand-bright: var(--brand-bright);
+  --color-brand-light: var(--brand-light);
+  --color-brand-deep: var(--brand-deep);
+  --color-on-brand: var(--on-brand);
+
+  /* Neutral-first action utilities: the primary CTA inverts with the theme */
+  --color-action: var(--action-bg);
+  --color-action-ink: var(--action-ink);
+  --color-action-hover: var(--action-hover-bg);
+
+  /* Secondary identity utilities */
+  --color-neon: var(--neon);
+  --color-neon-ink: var(--neon-ink);
+
+  /* Backward-compatible accent aliases */
+  --color-accent: var(--neon);
+  --color-accent-light: var(--neon-ink);
+  --color-accent-soft: var(--neon-glow);
+
+  /* Semantic status utilities */
+  --color-warning: var(--warning);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border: var(--border);
+
+  /* Typography */
+  --font-sans: var(--font-family);
+  --text-display: var(--size-display);
+  --text-heading-xl: var(--size-heading-xl);
+  --text-heading-lg: var(--size-heading-lg);
+  --text-heading-md: var(--size-heading-md);
+  --text-body: var(--size-body);
+  --text-small: var(--size-small);
+}
+
+/* ========================================
+   GLOBAL STYLES
+
+   These resets live in `base`, not at the top level. Tailwind's utilities sit
+   in the `utilities` layer, and unlayered CSS outranks every layer — so an
+   unlayered `a { color: inherit }` silently beat `text-*` on every link and
+   `text-*` on every form control. Element defaults belong below utilities.
+======================================== */
+
+@layer base {
+
+ *{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Anchor links (#web, #services...) land below the sticky navbar */
+  scroll-padding-top: calc(var(--navbar-height) + 1rem);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  line-height: var(--line-height-body);
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+input,
+textarea,
+select {
+  caret-color: var(--neon);
+  accent-color: var(--neon);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+}
+
+::selection {
+  /* Inverts with the theme instead of taking a guess at green on white:
+     near-black ink on white paper, white ink on near-black. */
+  background-color: var(--text-primary);
+  color: var(--background);
+}
+
+:focus-visible {
+  /* `brand-bright` is the mint weight that clears 3:1 on both surfaces;
+     plain `brand` is tuned for fills, not for thin outlines on white. */
+  outline: 2px solid var(--brand-bright);
+  outline-offset: 2px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.brand-intro-shape {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+.brand-intro-circle {
+  inset-block-start: 11%;
+  inset-inline-start: 8%;
+  width: clamp(7rem, 20vw, 18rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.brand-intro-square {
+  inset-block-end: 13%;
+  inset-inline-end: 10%;
+  width: clamp(4rem, 11vw, 9rem);
+  aspect-ratio: 1;
+  transform: rotate(15deg);
+  border-color: rgba(255, 255, 255, 0.035);
+}
+
+.brand-intro-outline {
+  inset-block-start: 18%;
+  inset-inline-end: 22%;
+  width: clamp(2.5rem, 6vw, 5rem);
+  height: clamp(6rem, 18vw, 14rem);
+  border-color: rgba(255, 255, 255, 0.03);
+}
+
+.brand-intro-crosshair {
+  inset-block-end: 22%;
+  inset-inline-start: 22%;
+  width: clamp(3.5rem, 8vw, 6.5rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border-style: dashed;
+  border-color: rgba(255, 255, 255, 0.025);
+}
+
+.hero-section-wash {
+  background: radial-gradient(
+    ellipse at 76% 48%,
+    var(--blue-glow),
+    transparent 55%
+  );
+}
+
+.hero-art-halo {
+  border-radius: 48% 52% 61% 39% / 40% 48% 52% 60%;
+  background: var(--blue-radial-glow);
+  filter: blur(8px);
+}
+
+/* ========================================
+   SERVICE HERO — THEMED BACKDROP
+   The hero follows the site theme instead of inverting against it: a dark
+   surface while the site is dark, a light one while the site is light. It
+   therefore remaps nothing — the section keeps the page's own semantic
+   tokens, so its buttons, borders, links and badges already match the rest
+   of the page and no component needs a theme branch.
+======================================== */
+
+.service-hero {
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition:
+    background-color 400ms ease,
+    color 400ms ease;
+}
+
+/* Two stacked tone layers cross-fade on theme change: background-image cannot
+   be interpolated, opacity can. The luminous layer is the light theme's, the
+   deep layer is the dark theme's, so the artwork matches whichever tone the
+   page is currently painting. */
+.service-hero-layer {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  /* Per-service bloom anchors, mirrored for RTL further down. */
+  --hero-bloom-a: var(--hero-bloom-x, 26%);
+  --hero-bloom-b: var(--hero-bloom-2-x, 78%);
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      var(--hero-layer-grid) 0,
+      var(--hero-layer-grid) 1px,
+      transparent 1px,
+      transparent var(--hero-grid-size, 88px)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--hero-layer-grid) 0,
+      var(--hero-layer-grid) 1px,
+      transparent 1px,
+      transparent var(--hero-grid-size, 88px)
+    ),
+    radial-gradient(
+      circle at var(--hero-bloom-a) var(--hero-bloom-y, 16%),
+      var(--hero-layer-glow),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at var(--hero-bloom-b) var(--hero-bloom-2-y, 88%),
+      var(--hero-layer-glow-soft),
+      transparent 55%
+    ),
+    linear-gradient(
+      158deg,
+      var(--hero-layer-start) 0%,
+      var(--hero-layer-canvas) 52%,
+      var(--hero-layer-end) 100%
+    );
+}
+
+html[dir="rtl"] .service-hero-layer {
+  --hero-bloom-a: calc(100% - var(--hero-bloom-x, 26%));
+  --hero-bloom-b: calc(100% - var(--hero-bloom-2-x, 78%));
+}
+
+.service-hero-layer--bright {
+  --hero-layer-start: var(--hero-bright-start);
+  --hero-layer-canvas: var(--hero-bright-canvas);
+  --hero-layer-end: var(--hero-bright-end);
+  --hero-layer-glow: var(--hero-bright-glow);
+  --hero-layer-glow-soft: var(--hero-bright-glow-soft);
+  --hero-layer-grid: var(--hero-bright-grid);
+  --hero-layer-line: var(--hero-bright-line);
+  --hero-layer-line-strong: var(--hero-bright-line-strong);
+  --hero-layer-fill: var(--hero-bright-fill);
+  --hero-layer-fill-strong: var(--hero-bright-fill-strong);
+}
+
+.service-hero-layer--deep {
+  --hero-layer-start: var(--hero-deep-start);
+  --hero-layer-canvas: var(--hero-deep-canvas);
+  --hero-layer-end: var(--hero-deep-end);
+  --hero-layer-glow: var(--hero-deep-glow);
+  --hero-layer-glow-soft: var(--hero-deep-glow-soft);
+  --hero-layer-grid: var(--hero-deep-grid);
+  --hero-layer-line: var(--hero-deep-line);
+  --hero-layer-line-strong: var(--hero-deep-line-strong);
+  --hero-layer-fill: var(--hero-deep-fill);
+  --hero-layer-fill-strong: var(--hero-deep-fill-strong);
+}
+
+/* Abstract geometry: anchored to the end edge and centred with flex, so it
+   never needs a transform — the parallax owns the transform on its parent and
+   the RTL mirror owns `scale` on this element. */
+.service-hero-motif {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: -4%;
+  display: flex;
+  align-items: center;
+  width: min(88%, 54rem);
+  pointer-events: none;
+}
+
+.service-hero-motif > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1023px) {
+  .service-hero-motif {
+    inset-inline: -18%;
+    width: auto;
+    opacity: 0.5;
+  }
+}
+
+/* Motif paint is token-driven, so one SVG renders correctly in both tones.
+   Only the small geometry carries the accent; the large fields stay neutral. */
+.service-hero-motif .hm-line {
+  stroke: var(--hero-layer-line);
+}
+
+.service-hero-motif .hm-line-strong {
+  stroke: var(--hero-layer-line-strong);
+}
+
+.service-hero-motif .hm-fill {
+  fill: var(--hero-layer-fill);
+}
+
+.service-hero-motif .hm-fill-strong {
+  fill: var(--hero-layer-fill-strong);
+}
+
+.service-hero-motif .hm-accent {
+  fill: var(--hero-motif-accent);
+}
+
+.service-hero-motif .hm-accent-soft {
+  fill: var(--hero-motif-accent-soft);
+}
+
+.service-hero-motif .hm-accent-line {
+  stroke: var(--hero-motif-accent-soft);
+}
+
+/* Oversized service name painted behind the hero content.
+   Decorative only: the h1 already announces the name, so the wordmark is
+   hidden from assistive tech, ignores pointer events and occupies no layout
+   space (absolute, so it can never shift the hero). Ink and weight come from
+   the hero tokens, so the wordmark matches the tone the hero is painting. */
+.service-hero-watermark {
+  position: absolute;
+  inset-inline: 0;
+  bottom: -0.08em;
+  z-index: -1;
+  display: block;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+  font-family: var(--font-family);
+  /* Kept deliberately low-contrast: the wordmark sets the mood, the h1 does
+     the talking, and a surface this large must never glow. */
+  font-size: clamp(2.25rem, 11vw, 9rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+  text-align: center;
+  text-wrap: balance;
+  text-transform: uppercase;
+  color: var(--hero-watermark-ink);
+  opacity: var(--hero-watermark-opacity);
+  pointer-events: none;
+  user-select: none;
+  transition: color 400ms ease;
+}
+
+/* Arabic has no upper case, and negative tracking breaks the cursive joins. */
+html[lang="ar"] .service-hero-watermark {
+  letter-spacing: 0;
+  line-height: 1.06;
+  text-transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-hero-watermark {
+    transition: none;
+  }
+}
+
+/* ========================================
+   SERVICE HERO — LAPTOP PREVIEW
+   The mockup is a picture of a website, not a surface of this one, so it
+   keeps a fixed neutral palette instead of inheriting the hero's tokens: a
+   screen that turned charcoal in light mode would read as broken hardware.
+   Only the accent is shared with the brand, and only on small elements —
+   never as a field.
+======================================== */
+
+.service-preview {
+  --pv-canvas: #ffffff;
+  --pv-surface: #f5f5f7;
+  --pv-surface-2: #e9e9ee;
+  --pv-ink: #101013;
+  --pv-ink-soft: #d9d9e0;
+  --pv-muted: #9b9ba6;
+  --pv-line: #e6e6ec;
+  --pv-line-strong: #cfcfd8;
+
+  /* Mint fill reads as a highlighted control; the ink weight is what stays
+     legible if a layout ever sets type in the accent. */
+  --pv-accent: #00bfa5;
+  --pv-accent-ink: #00735f;
+  --pv-accent-soft: #d2f3ec;
+
+  /* Hardware: dark neutral, so the frame belongs with the black-and-white
+     system rather than borrowing either hero tone. */
+  --pv-lid: #17171a;
+  --pv-lid-edge: rgba(255, 255, 255, 0.16);
+  --pv-deck: #101012;
+  --pv-deck-edge: rgba(255, 255, 255, 0.1);
+  --pv-glare: rgba(255, 255, 255, 0.07);
+}
+
+/* ========================================
+   SERVICE REQUESTS — DESCRIPTION REVEAL
+   The home page's service list explains each request on hover, folded into a
+   zero-height mask and faded out while the row is at rest. A touch device has
+   no hover to give, so there the description is simply open: the same text,
+   reachable without an interaction. Unlayered, so it outranks the utilities
+   that set the collapsed state.
+======================================== */
+
+@media (hover: none) {
+  .service-request-description {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}

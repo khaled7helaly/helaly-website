@@ -1,0 +1,170 @@
+[
+  {
+    "id": "seo-setup",
+    "titleKey": "request.addons.items.seoSetup.title",
+    "descriptionKey": "request.addons.items.seoSetup.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": ["digital-marketing", "small-business-websites"],
+    "price": null,
+    "currency": "USD",
+    "featured": true,
+    "order": 1
+  },
+  {
+    "id": "whatsapp-integration",
+    "titleKey": "request.addons.items.whatsappIntegration.title",
+    "descriptionKey": "request.addons.items.whatsappIntegration.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": [
+      "portfolio-websites",
+      "company-websites",
+      "academy-websites",
+      "restaurant-websites",
+      "tourism-websites",
+      "startup-websites",
+      "event-websites",
+      "applications"
+    ],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 2
+  },
+  {
+    "id": "contact-form",
+    "titleKey": "request.addons.items.contactForm.title",
+    "descriptionKey": "request.addons.items.contactForm.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": [
+      "portfolio-websites",
+      "company-websites",
+      "academy-websites",
+      "restaurant-websites",
+      "tourism-websites",
+      "startup-websites",
+      "event-websites",
+      "applications",
+      "small-business-websites"
+    ],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 3
+  },
+  {
+    "id": "extra-pages",
+    "titleKey": "request.addons.items.extraPages.title",
+    "descriptionKey": "request.addons.items.extraPages.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": [
+      "portfolio-websites",
+      "company-websites",
+      "academy-websites",
+      "restaurant-websites",
+      "tourism-websites",
+      "startup-websites",
+      "small-business-websites"
+    ],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 4
+  },
+  {
+    "id": "website-maintenance",
+    "titleKey": "request.addons.items.websiteMaintenance.title",
+    "descriptionKey": "request.addons.items.websiteMaintenance.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": [
+      "portfolio-websites",
+      "company-websites",
+      "academy-websites",
+      "restaurant-websites",
+      "tourism-websites",
+      "startup-websites",
+      "event-websites",
+      "applications"
+    ],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 5
+  },
+  {
+    "id": "product-catalog",
+    "titleKey": "request.addons.items.productCatalog.title",
+    "descriptionKey": "request.addons.items.productCatalog.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": ["small-business-websites"],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 6
+  },
+  {
+    "id": "bilingual-support",
+    "titleKey": "request.addons.items.bilingualSupport.title",
+    "descriptionKey": "request.addons.items.bilingualSupport.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": ["small-business-websites"],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 7
+  },
+  {
+    "id": "blog-integration",
+    "titleKey": "request.addons.items.blogIntegration.title",
+    "descriptionKey": "request.addons.items.blogIntegration.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": ["small-business-websites"],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 8
+  },
+  {
+    "id": "whatsapp-ordering",
+    "titleKey": "request.addons.items.whatsappOrdering.title",
+    "descriptionKey": "request.addons.items.whatsappOrdering.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": ["small-business-websites"],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 9
+  },
+  {
+    "id": "online-payment",
+    "titleKey": "request.addons.items.onlinePayment.title",
+    "descriptionKey": "request.addons.items.onlinePayment.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": ["small-business-websites"],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 10
+  },
+  {
+    "id": "cms-dashboard",
+    "titleKey": "request.addons.items.cmsDashboard.title",
+    "descriptionKey": "request.addons.items.cmsDashboard.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": ["small-business-websites"],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 11
+  },
+  {
+    "id": "advanced-animations",
+    "titleKey": "request.addons.items.advancedAnimations.title",
+    "descriptionKey": "request.addons.items.advancedAnimations.description",
+    "compatibleServiceIds": [],
+    "compatibleCategoryIds": ["small-business-websites"],
+    "price": null,
+    "currency": "USD",
+    "featured": false,
+    "order": 12
+  }
+]
