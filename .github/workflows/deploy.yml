@@ -50,6 +50,10 @@ jobs:
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          # Enable Pages with the GitHub Actions source automatically if it is
+          # not already configured (avoids a manual Settings step).
+          enablement: true
 
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
