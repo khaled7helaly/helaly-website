@@ -6,12 +6,12 @@ import Badge from "../components/ui/Badge";
 import Button from "../components/ui/Button";
 import Container from "../components/ui/Container";
 import EmptyState from "../components/ui/EmptyState";
+import StartingPrice from "../components/ui/StartingPrice";
 import PackageFaq from "../features/packages/components/PackageFaq";
 import PackageInquiryForm from "../features/packages/components/PackageInquiryForm";
 import PackageProposalDocument from "../features/packages/components/PackageProposalDocument";
 import PackageTerms from "../features/packages/components/PackageTerms";
 import { getPackageBySlug } from "../features/packages/utils/packageData";
-import formatMoney from "../features/packages/utils/formatMoney";
 
 /*
   Path B detail — one package, end to end: proposal document, order form, shared
@@ -35,8 +35,9 @@ function PackageNotFound() {
 }
 
 function PackageHero({ record }) {
-  const { t, i18n } = useTranslation();
-  const price = formatMoney(record.price, record.currency, i18n.resolvedLanguage);
+  const { t } = useTranslation();
+  const hasStartingPrice =
+    record.startingPrice != null && Boolean(record.currency);
   const revisions = Number.isFinite(record.revisions)
     ? t("packages.card.revisionsValue", { count: record.revisions })
     : null;
@@ -64,15 +65,12 @@ function PackageHero({ record }) {
         </div>
 
         <div className="mt-8 flex flex-wrap items-end gap-x-10 gap-y-5">
-          {price && (
-            <div>
-              <span className="block text-sm text-text-secondary">
-                {t("packages.details.priceTitle")}
-              </span>
-              <span className="mt-1 block text-3xl font-bold tabular-nums text-text-primary">
-                {price}
-              </span>
-            </div>
+          {hasStartingPrice && (
+            <StartingPrice
+              amount={record.startingPrice}
+              currency={record.currency}
+              className="text-heading-md"
+            />
           )}
 
           <div>

@@ -1,19 +1,17 @@
 import { useTranslation } from "react-i18next";
 
 import Checkbox from "../../../components/ui/Checkbox";
-import describeAddonPrice from "../utils/describeAddonPrice";
 
 /*
   Optional add-ons for one package.
 
-  The price shown beside each row matches the pricing type exactly: a firm amount
-  for `fixed`, "starting from" for `from`, and "at cost" for a pass-through cost.
-  Selecting an `at-cost` or `from` add-on never changes the known subtotal — see
-  `calculatePackagePrice`.
+  The add-ons stay selectable so the customer can describe what the project needs,
+  but no price is shown beside them and selecting one never changes any total —
+  the final quotation is prepared after the scope is reviewed.
 */
 
 function PackageAddons({ record, selectedIds = [], onToggle }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   if (!record.addons.length) return null;
 
@@ -45,7 +43,7 @@ function PackageAddons({ record, selectedIds = [], onToggle }) {
           return (
             <li
               key={addon.id}
-              className={`flex items-start justify-between gap-4 rounded-xl border p-4 transition-colors ${
+              className={`flex items-start gap-4 rounded-xl border p-4 transition-colors ${
                 isSelected
                   ? "border-brand/50 bg-brand/5"
                   : "border-border bg-surface"
@@ -60,14 +58,14 @@ function PackageAddons({ record, selectedIds = [], onToggle }) {
                 checked={isSelected}
                 onChange={() => onToggle(addon.id)}
               />
-
-              <span className="shrink-0 pt-0.5 text-sm font-medium tabular-nums text-text-primary">
-                {describeAddonPrice(addon, t, i18n.resolvedLanguage)}
-              </span>
             </li>
           );
         })}
       </ul>
+
+      <p className="mt-4 text-sm leading-relaxed text-text-secondary">
+        {t("pricing.customQuote")}
+      </p>
     </section>
   );
 }

@@ -61,6 +61,7 @@ export const SERVICE_HERO_COMPOSITIONS = {
   "academy-website": { motif: "layers", bloomX: 20, bloom2X: 68, bloomY: 36, bloom2Y: 82, gridSize: 84 },
   "restaurant-website": { motif: "scatter", bloomX: 66, bloom2X: 26, bloomY: 24, bloom2Y: 86, gridSize: 68 },
   "tourism-website": { motif: "orbit", bloomX: 40, bloom2X: 90, bloomY: 44, bloom2Y: 22, gridSize: 112 },
+  "small-business-website": { motif: "document", bloomX: 26, bloom2X: 74, bloomY: 28, bloom2Y: 80, gridSize: 96 },
 
   // Applications
   "web-app": { motif: "lattice", bloomX: 40, bloom2X: 84, bloomY: 18, bloom2Y: 88, gridSize: 64 },
@@ -75,6 +76,7 @@ export const SERVICE_HERO_COMPOSITIONS = {
 /** Used when a service arrives without a composition entry (new data, typo). */
 export const CATEGORY_HERO_COMPOSITIONS = {
   "web-development": SERVICE_HERO_COMPOSITIONS["startup-website"],
+  "small-business-websites": SERVICE_HERO_COMPOSITIONS["small-business-website"],
   applications: SERVICE_HERO_COMPOSITIONS["web-app"],
   "ui-ux-design": SERVICE_HERO_COMPOSITIONS["ui-ux-design"],
   "digital-marketing": SERVICE_HERO_COMPOSITIONS["digital-marketing"],

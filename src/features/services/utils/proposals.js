@@ -8,9 +8,9 @@ import PROPOSALS from "../../../data/proposals.json";
  *
  * A proposal holds its own opening headline, short introduction and the ordered
  * sections that make up the document. What's included comes from the service's
- * own `features`, the optional features come from `addons.json`, and the price
- * is calculated from the records the customer selects — so none of that is
- * duplicated here.
+ * own `features`, the optional features come from `addons.json`, and the
+ * starting price comes from the service record — so none of that is duplicated
+ * here.
  *
  * @typedef {"complete" | "outline"} ProposalStatus
  *

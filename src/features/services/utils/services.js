@@ -31,7 +31,7 @@ import { sortProjectsByOrder } from "../../projects/utils/projects";
  * @property {boolean} [featured]        General "highlight this service" flag (cards, footer).
  * @property {boolean} [heroFeatured]    Opts the service into the home page hero spotlight.
  * @property {number} [featuredOrder]    Sequence within the hero spotlight; lower comes first.
- * @property {number | null} [price]      Base price. `null` means "pending configuration".
+ * @property {number | null} [startingPrice] Starting price. `null` means "pending configuration".
  * @property {string} [currency]
  * @property {object} [requestConfig]     Which fields the request wizard asks for this service.
  */

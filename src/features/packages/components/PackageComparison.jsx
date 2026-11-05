@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Info } from "lucide-react";
 
 import SectionHeading from "../../../components/ui/SectionHeading";
+import StartingPrice from "../../../components/ui/StartingPrice";
 import { getHighlightDeliverables, packages } from "../utils/packageData";
-import formatMoney from "../utils/formatMoney";
 
 /*
   Comparison laid out as self-labelled columns rather than a wide table.
@@ -28,12 +28,13 @@ function ComparisonRow({ label, children }) {
 }
 
 function ComparisonColumn({ record, headingLevel }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const Heading = `h${headingLevel}`;
   const highlights = getHighlightDeliverables(record);
   const visible = highlights.slice(0, VISIBLE_DELIVERABLES);
   const remaining = highlights.length - visible.length;
-  const price = formatMoney(record.price, record.currency, i18n.resolvedLanguage);
+  const hasStartingPrice =
+    record.startingPrice != null && Boolean(record.currency);
 
   return (
     <article className="flex flex-col overflow-hidden rounded-2xl border border-border bg-surface">
@@ -47,10 +48,12 @@ function ComparisonColumn({ record, headingLevel }) {
           </Link>
         </Heading>
 
-        {price && (
-          <span className="mt-1 block text-sm font-semibold tabular-nums text-text-secondary">
-            {price}
-          </span>
+        {hasStartingPrice && (
+          <StartingPrice
+            amount={record.startingPrice}
+            currency={record.currency}
+            className="mt-1 text-sm"
+          />
         )}
       </header>
 
@@ -88,7 +91,11 @@ function ComparisonColumn({ record, headingLevel }) {
         </ComparisonRow>
 
         <ComparisonRow label={t("packages.comparison.price")}>
-          <span className="font-semibold tabular-nums">{price}</span>
+          <StartingPrice
+            amount={record.startingPrice}
+            currency={record.currency}
+            className="font-semibold"
+          />
         </ComparisonRow>
       </dl>
     </article>

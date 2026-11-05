@@ -9,7 +9,6 @@ import TextAreaField from "../../../components/ui/TextAreaField";
 import contact from "../../../config/contact";
 import optionGroups from "../../../data/packageFieldOptions.json";
 import { resolveFieldOptions } from "../utils/packageData";
-import calculatePackagePrice from "../utils/calculatePackagePrice";
 import buildPackageWhatsAppMessage from "../utils/buildPackageWhatsAppMessage";
 import validatePackageInquiry from "../utils/validatePackageInquiry";
 import PackageAddons from "./PackageAddons";
@@ -40,11 +39,6 @@ function PackageInquiryForm({ record }) {
   const [errors, setErrors] = useState([]);
   const [status, setStatus] = useState("idle");
   const clickLocked = useRef(false);
-
-  const price = useMemo(
-    () => calculatePackagePrice(record, selectedAddonIds),
-    [record, selectedAddonIds],
-  );
 
   const errorByField = useMemo(() => {
     const map = new Map();
@@ -105,7 +99,7 @@ function PackageInquiryForm({ record }) {
     const message = buildPackageWhatsAppMessage({
       record,
       state,
-      price,
+      selectedAddonIds,
       t,
       optionGroups,
       language: i18n.resolvedLanguage,
@@ -215,7 +209,7 @@ function PackageInquiryForm({ record }) {
             onToggle={toggleAddon}
           />
 
-          <PackagePriceSummary record={record} price={price} />
+          <PackagePriceSummary record={record} />
         </aside>
       </div>
 

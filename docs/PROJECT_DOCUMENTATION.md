@@ -518,8 +518,11 @@ is missing it returns `null`.
 
 ### 9.3 `src/components/brand/BrandLogo.jsx`
 
-Renders the "H" mark plus a "HELALY." wordmark. Accepts `wordmarkRef` and
-`isWordmarkHidden` so the brand intro can hand the wordmark off to the navbar.
+Renders the shared brand mark (`public/images/brand/image1.svg`) as a link to the
+home page, trimming the asset's transparent margin in CSS and deepening the mint
+on light surfaces for contrast. Accepts `wordmarkRef` and `isWordmarkHidden` so
+the brand intro can hand the mark off to the navbar, plus `sizeClassName` to set
+the responsive height per placement.
 
 ---
 

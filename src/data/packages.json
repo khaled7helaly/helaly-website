@@ -3,7 +3,7 @@
     "id": "career-launch",
     "slug": "career-launch",
     "order": 1,
-    "price": 1990,
+    "startingPrice": 1990,
     "currency": "EGP",
     "revisions": 2,
     "deliveryKey": "packages.items.careerLaunch.delivery",
@@ -32,10 +32,10 @@
       { "id": "achievements", "labelKey": "packages.items.careerLaunch.requirements.achievements" }
     ],
     "addons": [
-      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note", "pricing": { "type": "at-cost" } },
-      { "id": "second-language", "titleKey": "packages.addons.secondLanguage.title", "pricing": { "type": "fixed", "amount": 400, "currency": "EGP" } },
-      { "id": "fast-delivery", "titleKey": "packages.addons.fastDelivery.title", "pricing": { "type": "fixed", "amount": 400, "currency": "EGP" } },
-      { "id": "extra-cv-version", "titleKey": "packages.addons.extraCvVersion.title", "pricing": { "type": "fixed", "amount": 250, "currency": "EGP" } }
+      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note" },
+      { "id": "second-language", "titleKey": "packages.addons.secondLanguage.title" },
+      { "id": "fast-delivery", "titleKey": "packages.addons.fastDelivery.title" },
+      { "id": "extra-cv-version", "titleKey": "packages.addons.extraCvVersion.title" }
     ],
     "fields": [
       { "id": "targetRole", "type": "text", "labelKey": "packages.fields.targetRole", "required": true },
@@ -49,7 +49,7 @@
     "id": "freelancer-pro",
     "slug": "freelancer-pro",
     "order": 2,
-    "price": 3490,
+    "startingPrice": 3490,
     "currency": "EGP",
     "revisions": 2,
     "deliveryKey": "packages.items.freelancerPro.delivery",
@@ -85,10 +85,10 @@
       { "id": "platformUrls", "labelKey": "packages.items.freelancerPro.requirements.platformUrls" }
     ],
     "addons": [
-      { "id": "extra-platform", "titleKey": "packages.addons.extraPlatform.title", "pricing": { "type": "fixed", "amount": 300, "currency": "EGP" } },
-      { "id": "extra-case-study", "titleKey": "packages.addons.extraCaseStudy.title", "pricing": { "type": "fixed", "amount": 500, "currency": "EGP" } },
-      { "id": "bilingual-website", "titleKey": "packages.addons.bilingualWebsite.title", "pricing": { "type": "fixed", "amount": 600, "currency": "EGP" } },
-      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note", "pricing": { "type": "at-cost" } }
+      { "id": "extra-platform", "titleKey": "packages.addons.extraPlatform.title" },
+      { "id": "extra-case-study", "titleKey": "packages.addons.extraCaseStudy.title" },
+      { "id": "bilingual-website", "titleKey": "packages.addons.bilingualWebsite.title" },
+      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note" }
     ],
     "fields": [
       { "id": "professionalField", "type": "text", "labelKey": "packages.fields.professionalField", "required": true },
@@ -104,7 +104,7 @@
     "id": "digital-presence",
     "slug": "digital-presence",
     "order": 3,
-    "price": 4990,
+    "startingPrice": 4990,
     "currency": "EGP",
     "revisions": 2,
     "deliveryKey": "packages.items.digitalPresence.delivery",
@@ -144,10 +144,10 @@
       { "id": "socialUrls", "labelKey": "packages.items.digitalPresence.requirements.socialUrls" }
     ],
     "addons": [
-      { "id": "english-version", "titleKey": "packages.addons.englishVersion.title", "pricing": { "type": "fixed", "amount": 1200, "currency": "EGP" } },
-      { "id": "additional-page", "titleKey": "packages.addons.additionalPage.title", "pricing": { "type": "fixed", "amount": 400, "currency": "EGP" } },
-      { "id": "visual-identity", "titleKey": "packages.addons.visualIdentity.title", "pricing": { "type": "fixed", "amount": 800, "currency": "EGP" } },
-      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note", "pricing": { "type": "at-cost" } }
+      { "id": "english-version", "titleKey": "packages.addons.englishVersion.title" },
+      { "id": "additional-page", "titleKey": "packages.addons.additionalPage.title" },
+      { "id": "visual-identity", "titleKey": "packages.addons.visualIdentity.title" },
+      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note" }
     ],
     "fields": [
       { "id": "businessName", "type": "text", "labelKey": "packages.fields.businessName", "required": true },
@@ -165,7 +165,7 @@
     "id": "quick-store",
     "slug": "quick-store",
     "order": 4,
-    "price": 5990,
+    "startingPrice": 5990,
     "currency": "EGP",
     "revisions": 2,
     "deliveryKey": "packages.items.quickStore.delivery",
@@ -206,12 +206,12 @@
       { "id": "paymentMethods", "labelKey": "packages.items.quickStore.requirements.paymentMethods" }
     ],
     "addons": [
-      { "id": "extra-products", "titleKey": "packages.addons.extraProducts.title", "pricing": { "type": "fixed", "amount": 500, "currency": "EGP" } },
-      { "id": "discount-codes", "titleKey": "packages.addons.discountCodes.title", "pricing": { "type": "fixed", "amount": 500, "currency": "EGP" } },
-      { "id": "order-tracking", "titleKey": "packages.addons.orderTracking.title", "pricing": { "type": "fixed", "amount": 700, "currency": "EGP" } },
-      { "id": "card-payments", "titleKey": "packages.addons.cardPayments.title", "noteKey": "packages.addons.cardPayments.note", "pricing": { "type": "from", "amount": 2000, "currency": "EGP" } },
-      { "id": "english-version", "titleKey": "packages.addons.englishVersion.title", "pricing": { "type": "fixed", "amount": 1200, "currency": "EGP" } },
-      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note", "pricing": { "type": "at-cost" } }
+      { "id": "extra-products", "titleKey": "packages.addons.extraProducts.title" },
+      { "id": "discount-codes", "titleKey": "packages.addons.discountCodes.title" },
+      { "id": "order-tracking", "titleKey": "packages.addons.orderTracking.title" },
+      { "id": "card-payments", "titleKey": "packages.addons.cardPayments.title", "noteKey": "packages.addons.cardPayments.note" },
+      { "id": "english-version", "titleKey": "packages.addons.englishVersion.title" },
+      { "id": "custom-domain", "titleKey": "packages.addons.customDomain.title", "noteKey": "packages.addons.customDomain.note" }
     ],
     "fields": [
       { "id": "storeName", "type": "text", "labelKey": "packages.fields.storeName", "required": true },

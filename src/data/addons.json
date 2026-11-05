@@ -5,8 +5,6 @@
     "descriptionKey": "request.addons.items.seoSetup.description",
     "compatibleServiceIds": [],
     "compatibleCategoryIds": ["digital-marketing", "small-business-websites"],
-    "price": null,
-    "currency": "USD",
     "featured": true,
     "order": 1
   },
@@ -25,8 +23,6 @@
       "event-websites",
       "applications"
     ],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 2
   },
@@ -46,8 +42,6 @@
       "applications",
       "small-business-websites"
     ],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 3
   },
@@ -65,8 +59,6 @@
       "startup-websites",
       "small-business-websites"
     ],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 4
   },
@@ -85,8 +77,6 @@
       "event-websites",
       "applications"
     ],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 5
   },
@@ -96,8 +86,6 @@
     "descriptionKey": "request.addons.items.productCatalog.description",
     "compatibleServiceIds": [],
     "compatibleCategoryIds": ["small-business-websites"],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 6
   },
@@ -107,8 +95,6 @@
     "descriptionKey": "request.addons.items.bilingualSupport.description",
     "compatibleServiceIds": [],
     "compatibleCategoryIds": ["small-business-websites"],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 7
   },
@@ -118,8 +104,6 @@
     "descriptionKey": "request.addons.items.blogIntegration.description",
     "compatibleServiceIds": [],
     "compatibleCategoryIds": ["small-business-websites"],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 8
   },
@@ -129,8 +113,6 @@
     "descriptionKey": "request.addons.items.whatsappOrdering.description",
     "compatibleServiceIds": [],
     "compatibleCategoryIds": ["small-business-websites"],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 9
   },
@@ -140,8 +122,6 @@
     "descriptionKey": "request.addons.items.onlinePayment.description",
     "compatibleServiceIds": [],
     "compatibleCategoryIds": ["small-business-websites"],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 10
   },
@@ -151,8 +131,6 @@
     "descriptionKey": "request.addons.items.cmsDashboard.description",
     "compatibleServiceIds": [],
     "compatibleCategoryIds": ["small-business-websites"],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 11
   },
@@ -162,8 +140,6 @@
     "descriptionKey": "request.addons.items.advancedAnimations.description",
     "compatibleServiceIds": [],
     "compatibleCategoryIds": ["small-business-websites"],
-    "price": null,
-    "currency": "USD",
     "featured": false,
     "order": 12
   }

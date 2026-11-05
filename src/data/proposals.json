@@ -284,7 +284,7 @@
     "reference": "PRP-12",
     "status": "complete",
     "headlineKey": "services.proposals.smallBusiness.headline",
-    "introKey": "services.proposals.smallBusiness.intro",
+    "introKey": null,
     "actions": ["request"],
     "sections": [
       {
@@ -304,12 +304,6 @@
         "titleKey": "services.proposal.sections.receive",
         "type": "list",
         "itemsKey": "services.proposals.smallBusiness.receive"
-      },
-      {
-        "id": "deliverables",
-        "titleKey": "services.proposal.sections.deliverables",
-        "type": "pairs",
-        "itemsKey": "services.proposals.smallBusiness.deliverables"
       },
       {
         "id": "details",

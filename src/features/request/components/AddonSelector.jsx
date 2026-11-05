@@ -1,20 +1,16 @@
 import { useTranslation } from "react-i18next";
 
 import Checkbox from "../../../components/ui/Checkbox";
-import Price from "../../../components/ui/Price";
 import addons from "../../../data/addons.json";
 import services from "../../../data/services.json";
 import isAddonCompatible from "../utils/isAddonCompatible";
 import useRequestBuilder from "../hooks/useRequestBuilder";
 
-function hasPrice(item) {
-  return (
-    item?.price != null &&
-    Number.isFinite(item.price) &&
-    item.price >= 0 &&
-    Boolean(item.currency)
-  );
-}
+/*
+  Optional features are selectable but never priced: the charge for each one
+  depends on the finished scope, so the list carries the custom-quote note
+  instead of a figure. The selection itself travels with the request.
+*/
 
 function AddonSelector() {
   const { t } = useTranslation();
@@ -82,18 +78,14 @@ function AddonSelector() {
                     }
                     className="min-w-0"
                   />
-
-                  {hasPrice(addon) ? (
-                    <Price
-                      amount={addon.price}
-                      currency={addon.currency}
-                      className="ms-7 mt-3"
-                    />
-                  ) : null}
                 </li>
               );
             })}
           </ul>
+
+          <p className="mt-4 text-sm leading-relaxed text-text-secondary">
+            {t("pricing.customQuote")}
+          </p>
         </>
       ) : (
         <p className="mt-3 rounded-xl border border-border bg-surface p-4 text-sm text-text-secondary">

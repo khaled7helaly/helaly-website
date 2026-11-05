@@ -1,7 +1,5 @@
 import { useTranslation } from "react-i18next";
 
-import Price from "../../../components/ui/Price";
-import calculateOrderTotal from "../utils/calculateOrderTotal";
 import getRequestSelection from "../utils/getRequestSelection";
 import useRequestBuilder from "../hooks/useRequestBuilder";
 
@@ -20,6 +18,10 @@ function SummaryRow({ label, children }) {
  * The review screen is the last chance to catch a mistake, so every group of
  * answers carries its own "Edit" jump. Previously the only way back was the
  * progress bar, whose labels are hidden on mobile.
+ *
+ * No service or add-on price is printed here. The selection is what is being
+ * reviewed, and the quotation is prepared after the scope is read — so the only
+ * money on screen is the budget the customer typed themselves.
  */
 function SummarySection({ titleKey, step, onEdit, children }) {
   const { t } = useTranslation();
@@ -47,15 +49,6 @@ function SummarySection({ titleKey, step, onEdit, children }) {
   );
 }
 
-function hasPrice(item) {
-  return (
-    item?.price != null &&
-    Number.isFinite(item.price) &&
-    item.price >= 0 &&
-    Boolean(item.currency)
-  );
-}
-
 function OrderSummary({ onEditStep }) {
   const { t, i18n } = useTranslation();
   const { state } = useRequestBuilder();
@@ -72,7 +65,6 @@ function OrderSummary({ onEditStep }) {
     budget,
   } = selection;
 
-  const orderTotal = calculateOrderTotal(service, selectedAddons);
   const description = state.projectDescription.trim();
   const { fullName, whatsapp, email } = state.customer;
   const hasContact = Boolean(fullName.trim() || whatsapp.trim() || email.trim());
@@ -81,7 +73,6 @@ function OrderSummary({ onEditStep }) {
   const hasProject =
     Boolean(selection.projectType) || Boolean(description) || extraFields.length > 0;
   const hasBudget = Boolean(budget || selection.timelineLabel);
-  const pricingIncomplete = Boolean(service) && !orderTotal;
 
   return (
     <section
@@ -112,16 +103,7 @@ function OrderSummary({ onEditStep }) {
 
         <SummaryRow label={t("request.orderSummary.service")}>
           {service ? (
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <span>{t(service.titleKey)}</span>
-              {hasPrice(service) ? (
-                <Price
-                  amount={service.price}
-                  currency={service.currency}
-                  className="text-end"
-                />
-              ) : null}
-            </div>
+            t(service.titleKey)
           ) : (
             <span className="font-normal text-text-secondary">
               {t("request.orderSummary.selectService")}
@@ -164,15 +146,7 @@ function OrderSummary({ onEditStep }) {
         >
           {budget ? (
             <SummaryRow label={t("request.orderSummary.yourBudget")}>
-              {budget.hasCurrency ? (
-                <Price
-                  amount={budget.amount}
-                  currency={budget.currency}
-                  className="text-end"
-                />
-              ) : (
-                budget.formatted
-              )}
+              <bdi>{budget.formatted}</bdi>
             </SummaryRow>
           ) : null}
 
@@ -193,19 +167,7 @@ function OrderSummary({ onEditStep }) {
           {selectedAddons.length > 0 ? (
             <ul className="space-y-1.5">
               {selectedAddons.map((addon) => (
-                <li
-                  key={addon.id}
-                  className="flex flex-wrap items-center justify-between gap-3"
-                >
-                  <span>{t(addon.titleKey)}</span>
-                  {hasPrice(addon) ? (
-                    <Price
-                      amount={addon.price}
-                      currency={addon.currency}
-                      className="text-end"
-                    />
-                  ) : null}
-                </li>
+                <li key={addon.id}>{t(addon.titleKey)}</li>
               ))}
             </ul>
           ) : (
@@ -214,16 +176,6 @@ function OrderSummary({ onEditStep }) {
             </span>
           )}
         </SummaryRow>
-
-        {orderTotal ? (
-          <SummaryRow label={t("request.orderSummary.actualTotal")}>
-            <Price
-              amount={orderTotal.amount}
-              currency={orderTotal.currency}
-              className="text-end"
-            />
-          </SummaryRow>
-        ) : null}
       </SummarySection>
 
       {hasContact ? (
@@ -252,12 +204,12 @@ function OrderSummary({ onEditStep }) {
         </SummarySection>
       ) : null}
 
-      {pricingIncomplete ? (
+      {service ? (
         <p
           role="status"
           className="mt-5 rounded-xl border border-brand/30 bg-brand/10 p-4 text-sm text-text-secondary"
         >
-          {t("request.orderSummary.quotationNotice")}
+          {t("pricing.customQuote")}
         </p>
       ) : null}
     </section>

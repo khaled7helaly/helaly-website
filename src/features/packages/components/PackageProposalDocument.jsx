@@ -1,10 +1,9 @@
 import { useTranslation } from "react-i18next";
 import { AlertTriangle, Check } from "lucide-react";
 
+import StartingPrice from "../../../components/ui/StartingPrice";
 import { getHighlightDeliverables } from "../utils/packageData";
 import { getPackageTermsSections } from "../utils/packageContent";
-import describeAddonPrice from "../utils/describeAddonPrice";
-import formatMoney from "../utils/formatMoney";
 
 /*
   The package detail body is laid out as a commercial proposal document rather
@@ -13,6 +12,10 @@ import formatMoney from "../utils/formatMoney";
 
   `proposal.scope` lists the whole scope compactly, while `proposal.deliverables`
   expands the key items with the detail the catalogue supplies for them.
+
+  Pricing is a starting point only: the add-on clause lists the optional features
+  without individual prices and the final clause states the starting price with a
+  note that the real quotation follows the customer's requirements.
 */
 
 function Section({ number, title, children, tone = "default" }) {
@@ -37,12 +40,12 @@ function Section({ number, title, children, tone = "default" }) {
 }
 
 function PackageProposalDocument({ record }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
-  const language = i18n.resolvedLanguage;
   const highlights = getHighlightDeliverables(record);
   const terms = getPackageTermsSections();
-  const price = formatMoney(record.price, record.currency, language);
+  const hasStartingPrice =
+    record.startingPrice != null && Boolean(record.currency);
   const reference = `PKG-${String(record.order).padStart(2, "0")}`;
 
   return (
@@ -147,13 +150,8 @@ function PackageProposalDocument({ record }) {
         <ul className="space-y-3">
           {record.addons.map((addon) => (
             <li key={addon.id}>
-              <p className="flex flex-wrap items-baseline justify-between gap-2">
-                <span className="font-medium text-text-primary">
-                  {t(addon.titleKey)}
-                </span>
-                <span className="text-sm tabular-nums text-text-secondary">
-                  {describeAddonPrice(addon, t, language)}
-                </span>
+              <p className="font-medium text-text-primary">
+                {t(addon.titleKey)}
               </p>
               {addon.noteKey && (
                 <p className="mt-1 text-text-secondary">{t(addon.noteKey)}</p>
@@ -161,6 +159,8 @@ function PackageProposalDocument({ record }) {
             </li>
           ))}
         </ul>
+
+        <p className="mt-4 text-text-secondary">{t("pricing.customQuote")}</p>
       </Section>
 
       {record.notes.length > 0 && (
@@ -199,9 +199,15 @@ function PackageProposalDocument({ record }) {
       </Section>
 
       <Section number="11" title={t("packages.proposal.price")}>
-        <span className="text-2xl font-bold tabular-nums text-text-primary">
-          {price}
-        </span>
+        {hasStartingPrice && (
+          <StartingPrice
+            amount={record.startingPrice}
+            currency={record.currency}
+            className="text-2xl"
+          />
+        )}
+
+        <p className="mt-2 text-text-secondary">{t("pricing.customQuote")}</p>
       </Section>
     </article>
   );

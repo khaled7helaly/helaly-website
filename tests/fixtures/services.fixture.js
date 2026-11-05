@@ -54,8 +54,8 @@ export const SERVICE_FIXTURES = [
     processStepIds: ["discover", "retired-stage", "deliver"],
     // One id that no longer exists.
     faqIds: ["start-project", "retired-question", "project-cost"],
-    price: 1200,
-    currency: "USD",
+    startingPrice: 1200,
+    currency: "EGP",
   },
   {
     id: "fixture-sibling",

@@ -1,22 +1,21 @@
-import formatMoney from "./formatMoney";
+import formatStartingPrice from "../../../lib/formatStartingPrice";
 import { resolveFieldOptions } from "./packageData";
 
 /**
- * Builds the plain-text WhatsApp message for a fixed-package inquiry.
+ * Builds the plain-text WhatsApp message for a package inquiry.
  *
- * It reports three separate money figures rather than one invented total: the
- * base price, the known fixed add-ons, and — explicitly labelled — anything
- * whose real cost still has to be confirmed. A customer reading the message in
- * the chat bubble sees exactly what the price summary showed them on the page.
+ * It hands over the selected package, the optional features the customer ticked
+ * and the answers they filled in — but no computed price, because the quotation
+ * is only prepared once the scope is reviewed. The single money figure it states
+ * is the package's published starting price, always worded as a starting point.
  *
  * @typedef {import("./packageData").PackageRecord} PackageRecord
- * @typedef {import("./calculatePackagePrice").PackagePriceBreakdown} PackagePriceBreakdown
  * @typedef {import("./validatePackageInquiry").PackageInquiryState} PackageInquiryState
  *
  * @param {object} params
  * @param {PackageRecord} params.record
  * @param {PackageInquiryState} params.state
- * @param {PackagePriceBreakdown} params.price
+ * @param {string[]} [params.selectedAddonIds]
  * @param {(key: string, options?: object) => string} params.t
  * @param {Record<string, { value: string, labelKey: string }[]>} params.optionGroups
  * @param {string} [params.language]
@@ -25,14 +24,26 @@ import { resolveFieldOptions } from "./packageData";
 export default function buildPackageWhatsAppMessage({
   record,
   state,
-  price,
+  selectedAddonIds = [],
   t,
   optionGroups,
   language = "en",
 }) {
   const text = (value) => String(value ?? "").trim();
   const label = (key) => `*${t(key)}:*`;
-  const money = (amount, currency) => formatMoney(amount, currency, language);
+
+  const selectedIdSet = new Set(
+    Array.isArray(selectedAddonIds) ? selectedAddonIds : [],
+  );
+  const selectedAddons = (record.addons ?? []).filter((addon) =>
+    selectedIdSet.has(addon.id),
+  );
+
+  const hasStartingPrice =
+    record.startingPrice != null && Boolean(record.currency);
+  const startingPrice = hasStartingPrice
+    ? formatStartingPrice(record.startingPrice, record.currency, language, t)
+    : "";
 
   const lines = [
     t("packages.whatsapp.introduction"),
@@ -41,41 +52,19 @@ export default function buildPackageWhatsAppMessage({
     `${label("packages.summary.packageName")} ${t(record.nameKey)}`,
   ];
 
-  if (price) {
+  if (startingPrice) {
+    lines.push(`${label("pricing.startingFrom")} ${startingPrice}`);
+  }
+
+  if (selectedAddons.length > 0) {
     lines.push(
-      `${label("packages.summary.basePrice")} ${money(price.base, price.currency)}`,
+      "",
+      label("packages.addonPanel.title"),
+      ...selectedAddons.map((addon) => `- ${t(addon.titleKey)}`),
     );
   }
 
-  if (price && price.fixedAddons.length > 0) {
-    lines.push(
-      label("packages.summary.fixedAddons"),
-      ...price.fixedAddons.map(
-        (addon) =>
-          `- ${t(addon.titleKey)} — ${money(addon.amount, addon.currency)}`,
-      ),
-      `${label("packages.summary.subtotal")} ${money(price.subtotal, price.currency)}`,
-    );
-  } else if (price) {
-    lines.push(
-      `${label("packages.summary.subtotal")} ${money(price.subtotal, price.currency)}`,
-    );
-  }
-
-  if (price && price.variableAddons.length > 0) {
-    lines.push(
-      label("packages.summary.variableAddons"),
-      ...price.variableAddons.map((addon) => {
-        const base = `- ${t(addon.titleKey)}`;
-
-        if (addon.kind === "from" && addon.amount != null) {
-          return `${base} — ${t("packages.summary.startingFrom")} ${money(addon.amount, addon.currency)}`;
-        }
-
-        return `${base} — ${t("packages.summary.atCost")}`;
-      }),
-    );
-  }
+  lines.push("", t("pricing.customQuote"));
 
   const answeredFields = (record.fields ?? [])
     .map((field) => {

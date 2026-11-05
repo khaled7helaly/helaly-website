@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import { Link } from "react-router";
-import { motion, useReducedMotion } from "motion/react";
+import { useInView } from "motion/react";
 import { ArrowUpRight, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -10,22 +11,49 @@ import readTranslation from "../../../lib/readTranslation";
 import { services } from "../../services/utils/serviceData";
 
 const SERVICES_PATH = "/services";
-const EASE = [0.22, 1, 0.36, 1];
 
 /*
   The home page carries the requests Helaly leads with, not the catalogue:
   `featured` in services.json is the switch, and the Services page stays the one
-  place that lists everything. A row is the client's own sentence — the service's
-  `intentKey`, "I need a website for my company" — so the section reads as a list
-  of requests to choose from rather than another grid of cards. `popular` in the
-  same file is what puts the single star on a row; nothing here invents a
-  ranking of its own.
+  place that lists everything. A row is the client's own sentence (the service's
+  `intentKey`, "I need a website for my company") with the one line of what it
+  delivers right under it. `popular` puts the star on a row.
+
+  One column, one focal point, nothing hidden: the sentence, what you get, and a
+  clear arrow to go. The only motion is the lines between the rows. They draw
+  themselves once when the list arrives, and a brand line fills across a row on
+  hover or focus. Transforms only, no scroll listeners, no layout changes.
+  Reduced motion gets the lines already drawn and no transitions.
 */
 const REQUESTS = services.filter((service) => service.featured);
 
-function ServiceRequest({ service, index }) {
+const FADE = "linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent)";
+const FADE_MASK = { maskImage: FADE, WebkitMaskImage: FADE };
+
+// Two soft splashes of colour, painted once. Logical offsets, so RTL mirrors itself.
+const GLOW_A = {
+  backgroundImage:
+    "radial-gradient(closest-side, color-mix(in oklab, var(--brand) 20%, transparent), transparent)",
+};
+const GLOW_B = {
+  backgroundImage:
+    "radial-gradient(closest-side, color-mix(in oklab, var(--brand-deep) 38%, transparent), transparent)",
+};
+
+function Rule({ drawn, delay, className }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`pointer-events-none absolute inset-x-0 h-px origin-left bg-border transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] rtl:origin-right motion-reduce:scale-x-100 motion-reduce:transition-none ${
+        drawn ? "scale-x-100" : "scale-x-0"
+      } ${className}`}
+      style={{ transitionDelay: `${delay}ms` }}
+    />
+  );
+}
+
+function ServiceRequest({ service, index, drawn }) {
   const { t } = useTranslation();
-  const prefersReducedMotion = useReducedMotion();
 
   const intent = readTranslation(t, service.intentKey);
   const preview = readTranslation(t, service.previewDescriptionKey);
@@ -35,65 +63,69 @@ function ServiceRequest({ service, index }) {
   }
 
   return (
-    <motion.li
-      initial={prefersReducedMotion ? false : { opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.6 }}
-      transition={{
-        duration: 0.45,
-        delay: prefersReducedMotion ? 0 : index * 0.05,
-        ease: EASE,
-      }}
-    >
+    <li className="relative">
       <Link
         to={service.url}
-        className="group flex flex-col rounded-lg px-3 py-4 outline-offset-2 transition-colors duration-200 hover:bg-accent-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-neon motion-reduce:transition-none sm:px-4"
+        className="group relative flex items-start justify-between gap-5 rounded-lg py-6 outline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-neon sm:gap-8 sm:py-7"
       >
-        <span className="flex items-center justify-between gap-4">
-          <span className="text-body font-medium text-pretty text-text-primary transition-colors duration-200 group-hover:text-brand-light motion-reduce:transition-none sm:text-lg">
+        <span className="min-w-0">
+          <span className="block max-w-3xl text-body font-medium leading-[1.5] text-pretty text-text-primary transition-colors duration-300 group-hover:text-brand-light group-focus-visible:text-brand-light motion-reduce:transition-none sm:text-xl lg:text-2xl">
             {intent}
           </span>
 
-          <span className="flex shrink-0 items-center gap-3">
-            {service.popular ? (
-              <>
-                <Star size={14} aria-hidden="true" fill="currentColor" className="text-brand-light" />
-                <span className="sr-only">{t("common.featured")}</span>
-              </>
-            ) : null}
+          {preview ? (
+            <span className="mt-2 block max-w-2xl text-small leading-[1.7] text-pretty text-text-secondary">
+              {preview}
+            </span>
+          ) : null}
+        </span>
 
+        <span className="flex shrink-0 items-center gap-3 sm:gap-4">
+          {service.popular ? (
+            <>
+              <Star size={14} aria-hidden="true" fill="currentColor" className="text-brand-light" />
+              <span className="sr-only">{t("common.featured")}</span>
+            </>
+          ) : null}
+
+          <span
+            aria-hidden="true"
+            className="flex size-11 items-center justify-center rounded-full border border-border text-text-secondary transition-colors duration-300 group-hover:border-brand/50 group-hover:bg-accent-soft group-hover:text-brand-light group-focus-visible:border-brand/50 group-focus-visible:bg-accent-soft group-focus-visible:text-brand-light motion-reduce:transition-none"
+          >
             <ArrowUpRight
               size={18}
-              aria-hidden="true"
-              className="text-text-secondary transition-[color,translate] duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-light rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5 motion-reduce:transition-none"
+              className="transition-[translate] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5 motion-reduce:transition-none"
             />
           </span>
         </span>
 
-        {/* What the request delivers, one line, stored with the service in
-            services.json. At rest it is folded away inside its own mask and
-            opens on hover or keyboard focus. A touch device has no hover to
-            give, so there it is simply open (see `.service-request-description`
-            in src/styles/index.css). */}
-        {preview ? (
-          <div className="service-request-description grid grid-rows-[0fr] opacity-0 transition-[grid-template-rows,opacity] duration-300 ease-out group-hover:grid-rows-[1fr] group-hover:opacity-100 group-focus-visible:grid-rows-[1fr] group-focus-visible:opacity-100 motion-reduce:transition-none">
-            <div className="overflow-hidden">
-              <p className="pt-2 text-small leading-[1.7] text-pretty text-text-secondary">
-                {preview}
-              </p>
-            </div>
-          </div>
-        ) : null}
+        {/* The line under the row: draws once, then a brand line fills over it. */}
+        <Rule drawn={drawn} delay={(index + 1) * 70} className="bottom-0" />
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-brand transition-transform duration-500 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100 rtl:origin-right motion-reduce:transition-none"
+        />
       </Link>
-    </motion.li>
+    </li>
   );
 }
 
 function ServicesPreview() {
   const { t } = useTranslation();
+  const listRef = useRef(null);
+  const drawn = useInView(listRef, { once: true, amount: 0.15 });
 
   return (
-    <section className="border-t border-border py-16 sm:py-20 lg:py-24">
+    <section className="relative isolate border-t border-border py-16 sm:py-20 lg:py-24">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+        style={FADE_MASK}
+      >
+        <span className="absolute -top-16 -end-32 size-[36rem] rounded-full" style={GLOW_A} />
+        <span className="absolute -bottom-24 -start-32 size-[32rem] rounded-full" style={GLOW_B} />
+      </div>
+
       <Container>
         <SectionHeading
           eyebrow={t("common.services")}
@@ -102,15 +134,16 @@ function ServicesPreview() {
           className="max-w-3xl"
         />
 
-        <ul className="mt-10 divide-y divide-border border-y border-border sm:mt-12">
+        <ul ref={listRef} className="relative mt-10 sm:mt-12">
+          <Rule drawn={drawn} delay={0} className="top-0" />
           {REQUESTS.map((service, index) => (
-            <ServiceRequest key={service.id} service={service} index={index} />
+            <ServiceRequest key={service.id} service={service} index={index} drawn={drawn} />
           ))}
         </ul>
 
         {/* One action, not two. The section's job is to lead into the
             catalogue, so the button wears the brand fill and the request flow
-            keeps starting where it belongs — on a service page or a proposal. */}
+            keeps starting where it belongs: on a service page or a proposal. */}
         <div className="mt-10 flex">
           <Button
             as={Link}

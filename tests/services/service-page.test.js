@@ -120,9 +120,9 @@ test("renders every section a fully configured service supports", async () => {
   assert.match(html, /service-hero-layer--deep/);
   assert.match(html, /class="hm-/);
 
-  // A configured price is shown with its label.
+  // A configured starting price is shown with its label.
   assert.match(html, /1,200/);
-  assert.match(html, new RegExp(escapeRegExp(en.services.startingPrice)));
+  assert.match(html, new RegExp(escapeRegExp(en.pricing.startingFrom)));
 
   // Overview
   assert.match(html, new RegExp(escapeRegExp(en.services.overview.title)));
@@ -183,8 +183,8 @@ test("optional sections stay hidden when the service has no content for them", a
   );
 
   assert.match(html, /Minimal Fixture Service/);
-  // No price configured: neither the amount nor its label appears.
-  assert.doesNotMatch(html, new RegExp(escapeRegExp(en.services.startingPrice)));
+  // No starting price configured: neither the amount nor its label appears.
+  assert.doesNotMatch(html, new RegExp(escapeRegExp(en.pricing.startingFrom)));
 
   // A dangling key must not surface, and its section must not render at all.
   assert.doesNotMatch(html, /fixture\.services\.minimal\.missing/);

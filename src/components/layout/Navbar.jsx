@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 import { motion, useReducedMotion } from "motion/react";
 import { useTranslation } from "react-i18next";
 
+import BrandLogo from "../brand/BrandLogo";
 import Container from "../ui/Container";
 import StartButton from "../ui/Startbutton";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -15,23 +16,7 @@ import { NAVIGATION_ITEMS, PROJECT_PATH } from "./navigation";
   (the hero pulls itself up by --navbar-height), solid once the page is scrolled.
 */
 
-function Brand() {
-  return (
-    <Link
-      to="/"
-      aria-label="Helaly"
-      className="inline-flex items-center rounded-xl outline-offset-4"
-    >
-      <img
-        src="/images/brand/image1.svg"
-        alt="Helaly"
-        className="h-17 w-auto max-w-[200px] object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.45)] transition-transform duration-300 hover:scale-[1.03] motion-reduce:transition-none"
-      />
-    </Link>
-  );
-}
-
-function Navbar() {
+function Navbar({ brandWordmarkRef, isBrandWordmarkHidden }) {
   const { t } = useTranslation();
   const prefersReducedMotion = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
@@ -59,7 +44,11 @@ function Navbar() {
     >
       <Container className="grid h-full grid-cols-[1fr_auto] items-center gap-3 xl:grid-cols-[1fr_auto_1fr]">
         <div className="justify-self-start">
-          <Brand />
+          <BrandLogo
+            wordmarkRef={brandWordmarkRef}
+            isWordmarkHidden={isBrandWordmarkHidden}
+            className="transition-transform duration-300 hover:scale-[1.03] motion-reduce:transition-none"
+          />
         </div>
 
         <nav

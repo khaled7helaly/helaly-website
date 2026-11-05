@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 import Button from "../../../components/ui/Button";
 import Container from "../../../components/ui/Container";
-import Price from "../../../components/ui/Price";
+import StartingPrice from "../../../components/ui/StartingPrice";
 import { SERVICES_PATH } from "../../../components/layout/navigation";
 import readTranslation from "../../../lib/readTranslation";
 import buildRequestUrl from "../../request/utils/buildRequestUrl";
@@ -49,7 +49,8 @@ function ServiceHero({ service, ordinal = 0 }) {
     t,
     `services.categories.${service.category}.title`,
   );
-  const hasPrice = service.price != null && Boolean(service.currency);
+  const hasStartingPrice =
+    service.startingPrice != null && Boolean(service.currency);
   const hasDescription = description.length > 0;
   // The anchor below only has somewhere to go while the proposal is rendered,
   // which `ServiceProposal` does for finished documents only.
@@ -123,17 +124,18 @@ function ServiceHero({ service, ordinal = 0 }) {
               </motion.p>
             ) : null}
 
-            {/* Only configured prices are shown; `Price` renders nothing when the
-                amount is missing, and the guard keeps the spacing collapse-free. */}
-            {hasPrice ? (
+            {/* Only a configured starting price is shown, and it is always
+                worded as a starting point rather than a final figure. The guard
+                keeps the spacing collapse-free when no price is approved yet. */}
+            {hasStartingPrice ? (
               <motion.div
                 {...revealMotion(prefersReducedMotion, 0.2)}
                 className="mt-6"
               >
-                <Price
-                  amount={service.price}
+                <StartingPrice
+                  amount={service.startingPrice}
                   currency={service.currency}
-                  label={t("services.startingPrice")}
+                  className="text-heading-md"
                 />
               </motion.div>
             ) : null}

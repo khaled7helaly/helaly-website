@@ -170,7 +170,7 @@ function Footer() {
             className="flex flex-col gap-7 border-b border-border pb-10 md:flex-row md:items-end md:justify-between md:gap-12 lg:pb-12"
           >
             <div className="min-w-0">
-              <BrandLogo />
+              <BrandLogo sizeClassName="h-7 sm:h-8" />
               <p className="mt-5 max-w-md text-pretty text-base leading-8 text-text-secondary">
                 {t("footer.tagline")}
               </p>

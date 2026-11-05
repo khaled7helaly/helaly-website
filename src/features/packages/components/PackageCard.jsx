@@ -5,15 +5,16 @@ import { Check, Clock, RefreshCw } from "lucide-react";
 
 import Badge from "../../../components/ui/Badge";
 import Button from "../../../components/ui/Button";
+import StartingPrice from "../../../components/ui/StartingPrice";
 import { getHighlightDeliverables } from "../utils/packageData";
-import formatMoney from "../utils/formatMoney";
 
 /*
   A fixed-package card.
 
-  It shows the published base price in full — no "was/now", no discount badge and
-  no "most popular" ribbon, because the catalogue supplies none of those and the
-  packages are aimed at different customers rather than stacked tiers.
+  The only money it shows is the published starting price, always worded as a
+  starting point — no "was/now", no discount badge and no "most popular" ribbon,
+  because the catalogue supplies none of those and the packages are aimed at
+  different customers rather than stacked tiers.
 
   The whole card is clickable through a stretched link on the package name; the
   two buttons sit above it in a raised stacking context so both stay operable.
@@ -32,13 +33,14 @@ function MetaItem({ icon, label, value }) {
 }
 
 function PackageCard({ record, headingLevel = 3, priority = false }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const Heading = `h${headingLevel}`;
 
   const detailsUrl = `/packages/${record.slug}`;
   const orderUrl = `/packages/${record.slug}#package-order`;
   const highlights = getHighlightDeliverables(record);
-  const price = formatMoney(record.price, record.currency, i18n.resolvedLanguage);
+  const hasStartingPrice =
+    record.startingPrice != null && Boolean(record.currency);
   const revisions = Number.isFinite(record.revisions)
     ? t("packages.card.revisionsValue", { count: record.revisions })
     : null;
@@ -65,14 +67,13 @@ function PackageCard({ record, headingLevel = 3, priority = false }) {
           {t(record.taglineKey)}
         </p>
 
-        {price && (
+        {hasStartingPrice && (
           <div className="mt-5 border-t border-border pt-5">
-            <span className="block text-sm text-text-secondary">
-              {t("packages.card.priceLabel")}
-            </span>
-            <span className="mt-1 block text-2xl font-bold tabular-nums text-text-primary">
-              {price}
-            </span>
+            <StartingPrice
+              amount={record.startingPrice}
+              currency={record.currency}
+              className="text-lg"
+            />
           </div>
         )}
 

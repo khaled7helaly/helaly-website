@@ -4,17 +4,14 @@ import packagesData from "../../../data/packages.json";
  * Fixed-package data contract for `src/data/packages.json`.
  *
  * Packages are a separate product line from custom services on purpose: they
- * carry a fixed price, a fixed scope and a short, package-specific inquiry
- * form, so they must never be merged into `services.json` or pushed through the
- * large request wizard.
- *
- * @typedef {"fixed" | "from" | "at-cost"} AddonPricingType
+ * carry a published starting price, a fixed scope and a short, package-specific
+ * inquiry form, so they must never be merged into `services.json` or pushed
+ * through the large request wizard.
  *
  * @typedef {object} PackageAddon
- * @property {string} id                                  Stable id used by the price calculator.
+ * @property {string} id                                  Stable id used by the selection state.
  * @property {string} titleKey                            i18n key for the add-on name.
- * @property {string} [noteKey]                           i18n key for a caveat (at-cost / starting-from).
- * @property {{ type: AddonPricingType, amount?: number, currency?: string }} pricing
+ * @property {string} [noteKey]                           i18n key for a short caveat.
  *
  * @typedef {object} PackageDeliverable
  * @property {string} id
@@ -32,7 +29,7 @@ import packagesData from "../../../data/packages.json";
  * @property {string} id
  * @property {string} slug            URL segment used by /packages/:slug.
  * @property {number} order
- * @property {number} price           Numeric base price — never a formatted string.
+ * @property {number} startingPrice   Numeric starting price — never a formatted string.
  * @property {string} currency
  * @property {number} revisions
  * @property {string} deliveryKey

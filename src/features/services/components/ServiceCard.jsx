@@ -5,7 +5,7 @@ import { Blocks, Code, Megaphone, PenTool, Star } from "lucide-react";
 
 import Badge from "../../../components/ui/Badge";
 import Button from "../../../components/ui/Button";
-import Price from "../../../components/ui/Price";
+import StartingPrice from "../../../components/ui/StartingPrice";
 import readTranslation from "../../../lib/readTranslation";
 import buildRequestUrl from "../../request/utils/buildRequestUrl";
 
@@ -101,10 +101,9 @@ function ServiceCard({ service, priority = false, headingLevel = 3 }) {
         ) : null}
 
         <div className="mt-5 flex flex-wrap items-end justify-between gap-4 border-t border-border pt-5">
-          <Price
-            amount={service.price}
+          <StartingPrice
+            amount={service.startingPrice}
             currency={service.currency}
-            label={t("services.startingPrice")}
           />
 
           {/* Wrappers (not the Buttons) carry relative z-10, so the actions

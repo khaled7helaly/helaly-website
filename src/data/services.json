@@ -16,8 +16,8 @@
     "heroFeatured": true,
     "featuredOrder": 1,
     "popular": true,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -70,8 +70,8 @@
     "overviewKey": null,
     "descriptionKey": null,
     "featured": false,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -129,8 +129,8 @@
     "descriptionKey": null,
     "featured": true,
     "popular": true,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -184,8 +184,8 @@
     "overviewKey": null,
     "descriptionKey": null,
     "featured": true,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 2,
     "features": [
       {
@@ -244,8 +244,8 @@
     "featured": true,
     "heroFeatured": true,
     "featuredOrder": 3,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -302,8 +302,8 @@
     "heroFeatured": true,
     "featuredOrder": 2,
     "popular": true,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -356,8 +356,8 @@
     "overviewKey": null,
     "descriptionKey": null,
     "featured": false,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -407,8 +407,8 @@
     "overviewKey": "services.items.tourism.overview",
     "descriptionKey": null,
     "featured": true,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -461,8 +461,8 @@
     "overviewKey": null,
     "descriptionKey": null,
     "featured": false,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -511,8 +511,8 @@
     "overviewKey": null,
     "descriptionKey": null,
     "featured": false,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -564,8 +564,8 @@
     "featured": true,
     "heroFeatured": true,
     "featuredOrder": 4,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -626,8 +626,8 @@
     "overviewKey": "services.items.smallBusiness.overview",
     "descriptionKey": "services.items.smallBusiness.description",
     "featured": true,
-    "price": null,
-    "currency": "USD",
+    "startingPrice": null,
+    "currency": "EGP",
     "order": 1,
     "features": [
       {
@@ -639,10 +639,6 @@
         "descriptionKey": "services.items.smallBusiness.features.introduction.description"
       },
       {
-        "titleKey": "services.items.smallBusiness.features.about.title",
-        "descriptionKey": "services.items.smallBusiness.features.about.description"
-      },
-      {
         "titleKey": "services.items.smallBusiness.features.showcase.title",
         "descriptionKey": "services.items.smallBusiness.features.showcase.description"
       },
@@ -651,24 +647,12 @@
         "descriptionKey": "services.items.smallBusiness.features.contact.description"
       },
       {
-        "titleKey": "services.items.smallBusiness.features.whatsapp.title",
-        "descriptionKey": "services.items.smallBusiness.features.whatsapp.description"
-      },
-      {
         "titleKey": "services.items.smallBusiness.features.social.title",
         "descriptionKey": "services.items.smallBusiness.features.social.description"
       },
       {
-        "titleKey": "services.items.smallBusiness.features.mobile.title",
-        "descriptionKey": "services.items.smallBusiness.features.mobile.description"
-      },
-      {
         "titleKey": "services.items.smallBusiness.features.seo.title",
         "descriptionKey": "services.items.smallBusiness.features.seo.description"
-      },
-      {
-        "titleKey": "services.items.smallBusiness.features.callsToAction.title",
-        "descriptionKey": "services.items.smallBusiness.features.callsToAction.description"
       }
     ],
     "deliverables": [

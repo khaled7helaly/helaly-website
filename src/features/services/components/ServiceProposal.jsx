@@ -7,11 +7,10 @@ import { Link } from "react-router";
 import Button from "../../../components/ui/Button";
 import Checkbox from "../../../components/ui/Checkbox";
 import Container from "../../../components/ui/Container";
-import Price from "../../../components/ui/Price";
+import StartingPrice from "../../../components/ui/StartingPrice";
 import addons from "../../../data/addons.json";
 import readTranslation from "../../../lib/readTranslation";
 import buildRequestUrl from "../../request/utils/buildRequestUrl";
-import calculateOrderTotal from "../../request/utils/calculateOrderTotal";
 import isAddonCompatible from "../../request/utils/isAddonCompatible";
 import { getProposalByServiceSlug } from "../utils/proposals";
 
@@ -25,9 +24,10 @@ import { getProposalByServiceSlug } from "../utils/proposals";
  * content behind them, so the service page simply ends without it.
  *
  * Two of the sections are interactive rather than written: the optional extras
- * come from `addons.json` and the estimate adds whatever is ticked to the base
- * price. Prices that are not confirmed yet stay `null` and the document says so
- * instead of showing a number nobody has agreed.
+ * come from `addons.json` and the pricing clause states the service's starting
+ * price. Extras are never priced individually and never added up here — the
+ * document states that the quotation follows the customer's requirements, and
+ * the ticked extras are carried into the request instead.
  */
 
 const EASE = [0.22, 1, 0.36, 1];
@@ -106,17 +106,17 @@ function PairsBody({ itemsKey }) {
   );
 }
 
-/** Only a confirmed amount in a named currency can be shown as a price. */
-function hasPrice(item) {
+/** Only a confirmed starting amount in a named currency can be shown. */
+function hasStartingPrice(item) {
   return (
-    item?.price != null &&
-    Number.isFinite(item.price) &&
-    item.price >= 0 &&
+    item?.startingPrice != null &&
+    Number.isFinite(item.startingPrice) &&
+    item.startingPrice >= 0 &&
     Boolean(item.currency)
   );
 }
 
-/** The extras the customer can add, with the estimate they feed. */
+/** The extras the customer can add. They are carried into the request, unpriced. */
 function AddonsBody({ options }) {
   const { t } = useTranslation();
   const { availableAddons, selectedAddonIds, onToggleAddon } = options;
@@ -153,98 +153,42 @@ function AddonsBody({ options }) {
                 onChange={() => onToggleAddon(addon.id)}
                 className="min-w-0"
               />
-
-              {hasPrice(addon) ? (
-                <Price
-                  amount={addon.price}
-                  currency={addon.currency}
-                  className="ms-7 mt-3"
-                />
-              ) : (
-                <p className="ms-7 mt-2 text-small text-text-secondary">
-                  {t("services.proposal.options.priceOnRequest")}
-                </p>
-              )}
             </li>
           );
         })}
       </ul>
+
+      <p className="mt-5 max-w-[68ch] text-small leading-[1.7] text-text-secondary">
+        {t("pricing.customQuote")}
+      </p>
     </div>
   );
 }
 
-function EstimateRow({ label, children }) {
-  return (
-    <div className="flex flex-wrap items-baseline justify-between gap-3 border-t border-border py-3 first:border-t-0 first:pt-0">
-      <dt className="text-small text-text-secondary">{label}</dt>
-      <dd className="text-start font-semibold text-text-primary">{children}</dd>
-    </div>
-  );
-}
-
-/** Base price plus the ticked extras, or the reason there is no number yet. */
-function EstimateBody({ options }) {
+/**
+ * The document's only money statement.
+ *
+ * It prints the service's starting price and says plainly that the quotation
+ * follows the customer's requirements. There is deliberately no extras list and
+ * no total: nothing here can be summed before the scope is reviewed.
+ */
+function PricingBody({ options }) {
   const { t } = useTranslation();
-  const { service, selectedAddons, orderTotal } = options;
+  const { service } = options;
 
   return (
     <div className="max-w-[68ch]">
-      <dl className="grid">
-        <EstimateRow label={t("services.proposal.estimate.base")}>
-          {hasPrice(service) ? (
-            <Price amount={service.price} currency={service.currency} />
-          ) : (
-            t("services.proposal.options.priceOnRequest")
-          )}
-        </EstimateRow>
+      {hasStartingPrice(service) ? (
+        <StartingPrice
+          amount={service.startingPrice}
+          currency={service.currency}
+          className="text-body"
+        />
+      ) : null}
 
-        {selectedAddons.length > 0 ? (
-          <EstimateRow label={t("services.proposal.estimate.extras")}>
-            <ul className="space-y-2">
-              {selectedAddons.map((addon) => (
-                <li
-                  key={addon.id}
-                  className="flex flex-wrap items-baseline justify-between gap-3"
-                >
-                  <span className="font-normal text-text-secondary">
-                    {t(addon.titleKey)}
-                  </span>
-                  {hasPrice(addon) ? (
-                    <Price amount={addon.price} currency={addon.currency} />
-                  ) : (
-                    <span className="text-small font-normal text-text-secondary">
-                      {t("services.proposal.options.priceOnRequest")}
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </EstimateRow>
-        ) : (
-          <EstimateRow label={t("services.proposal.estimate.extras")}>
-            <span className="font-normal text-text-secondary">
-              {t("services.proposal.estimate.none")}
-            </span>
-          </EstimateRow>
-        )}
-
-        <EstimateRow label={t("services.proposal.estimate.total")}>
-          {orderTotal ? (
-            <Price amount={orderTotal.amount} currency={orderTotal.currency} />
-          ) : (
-            t("services.proposal.options.priceOnRequest")
-          )}
-        </EstimateRow>
-      </dl>
-
-      {orderTotal ? null : (
-        <p
-          role="status"
-          className="mt-5 rounded-xl border border-brand/30 bg-brand/[0.07] p-4 text-small leading-[1.7] text-text-secondary"
-        >
-          {t("services.proposal.estimate.pending")}
-        </p>
-      )}
+      <p className="mt-4 text-body leading-[1.8] text-text-secondary">
+        {t("pricing.customQuote")}
+      </p>
     </div>
   );
 }
@@ -263,7 +207,7 @@ function SectionBody({ section, options }) {
   }
 
   if (section.type === "pricing") {
-    return <EstimateBody options={options} />;
+    return <PricingBody options={options} />;
   }
 
   return <ProseBody bodyKey={section.bodyKey} />;
@@ -329,18 +273,10 @@ function ServiceProposal({ service }) {
     .filter((addon) => isAddonCompatible(addon, service.id, service.category))
     .sort((first, second) => first.order - second.order);
 
-  const selectedAddons = availableAddons.filter((addon) =>
-    selectedAddonIds.includes(addon.id),
-  );
-
   const options = {
     service,
     availableAddons,
     selectedAddonIds,
-    selectedAddons,
-    // `null` while any price is unconfirmed: the estimate says so rather than
-    // adding up numbers nobody has agreed to.
-    orderTotal: calculateOrderTotal(service, selectedAddons),
     onToggleAddon: (addonId) =>
       setSelectedAddonIds((current) =>
         current.includes(addonId)
